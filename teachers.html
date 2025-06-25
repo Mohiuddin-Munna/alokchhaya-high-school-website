@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আলোকছায়া হাই স্কুল</title> <!-- পেজের টাইটেল পরিবর্তন হতে পারে -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"> <!-- আপনার মূল CSS ফাইল -->
+</head>
+<body>
+
+    <!-- ============================================= -->
+    <!-- Navbar Section -->
+    <!-- ============================================= -->
+    <header class="header fixed-navbar"> <!-- নতুন ক্লাস fixed-navbar যোগ করা হলো -->
+        <nav class="navbar container">
+            <div class="nav-branding">
+                <!-- অপশন ১: শুধুমাত্র স্কুলের নাম -->
+                <a href="/" class="nav-logo-text">আলোকছায়া হাই স্কুল</a>
+
+                <!-- অপশন ২: স্কুলের লোগো এবং নাম (লোগো থাকলে এটি ব্যবহার করুন) -->
+                <!--
+                <a href="/" class="nav-logo-link">
+                    <img src="images/school-logo.png" alt="আলোকছায়া হাই স্কুল লোগো" class="school-logo-img">
+                    <span class="nav-logo-text-with-image">আলোকছায়া হাই স্কুল</span>
+                </a>
+                -->
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">হোম</a> <!-- index.html এর জন্য active -->
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">আমাদের সম্পর্কে</a>
+                </li>
+                <li class="nav-item">
+                    <a href="classes.html" class="nav-link">শ্রেণিসমূহ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="notice.html" class="nav-link">নোটিশ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="admission.html" class="nav-link">ভর্তি</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">যোগাযোগ</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="main-content">
+        <!-- ============================================= -->
+        <!-- Teachers Page Hero/Title Section -->
+        <!-- ============================================= -->
+        <section class="page-title-hero teachers-page-hero" style="background-image: url('images/teachers-hero-bg.jpg');">
+            <div class="container">
+                <h1 class="page-main-title">আমাদের অভিজ্ঞ শিক্ষকমণ্ডলী</h1>
+                <div class="breadcrumb">
+                    <a href="/">হোম</a> <i class="fas fa-angle-right"></i> <span>শিক্ষকবৃন্দ</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- Teachers List/Grid Section -->
+        <!-- ============================================= -->
+        <section class="teachers-list-section section-padding">
+            <div class="container">
+                <div class="section-intro-text text-center">
+                    <p>আলোকছায়া হাই স্কুল তার নিবেদিতপ্রাণ ও অভিজ্ঞ শিক্ষকমণ্ডলীর জন্য গর্বিত। তাঁরা শিক্ষার্থীদের জ্ঞান অর্জনের পথকে সুগম করার পাশাপাশি তাদের নৈতিক ও মানবিক বিকাশে নিরলসভাবে কাজ করে চলেছেন। আমাদের শিক্ষকেরা আধুনিক শিক্ষণ পদ্ধতির মাধ্যমে প্রতিটি শিক্ষার্থীর সুপ্ত প্রতিভাকে বিকশিত করতে সচেষ্ট।</p>
+                </div>
+
+                <div class="teachers-grid-container">
+                    <!-- Teacher Card 1 -->
+                    <div class="teacher-profile-card"
+                         data-name="মোঃ শফিকুল ইসলাম"
+                         data-designation="সিনিয়র শিক্ষক (বাংলা বিভাগ)"
+                         data-qualification="এম.এ (বাংলা), বি.এড"
+                         data-image="https://caas.iubat.edu/wp-content/uploads/2021/02/Md-Shafiqul-Islam-296x296.png"
+                         data-joining="মার্চ ১, ২০১০"
+                         data-subjects="বাংলা ১ম পত্র, বাংলা ২য় পত্র, বাংলা সাহিত্য"
+                         data-experience="১৫ বছরের অধিক"
+                         data-bio="জনাব মোঃ শফিকুল ইসলাম একজন অত্যন্ত নিবেদিত ও অভিজ্ঞ শিক্ষক। তিনি দীর্ঘ সময় ধরে শিক্ষার্থীদের বাংলা ভাষা ও সাহিত্যের প্রতি ভালোবাসা সৃষ্টিতে গুরুত্বপূর্ণ ভূমিকা পালন করে আসছেন। তাঁর পাঠদান পদ্ধতি খুবই আকর্ষণীয় এবং তিনি শিক্ষার্থীদের কাছে অত্যন্ত জনপ্রিয়। তিনি বিভিন্ন সাহিত্য ও সাংস্কৃতিক কর্মকাণ্ডেও সক্রিয়ভাবে জড়িত।"
+                         data-email="shafiqul.islam@example.com"
+                         data-phone="01xxxxxxxxx"
+                         data-linkedin="#">
+                        <div class="teacher-card-image-wrapper">
+                            <img src="https://caas.iubat.edu/wp-content/uploads/2021/02/Md-Shafiqul-Islam-296x296.png" alt="মোঃ শফিকুল ইসলাম" class="teacher-card-photo">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">মোঃ শফিকুল ইসলাম</h3>
+                            <p class="teacher-card-designation">সিনিয়র শিক্ষক (বাংলা)</p>
+                        </div>
+                    </div>
+
+                    <!-- Teacher Card 2 -->
+                    <div class="teacher-profile-card"
+                         data-name="ফাহমিদা আক্তার"
+                         data-designation="সহকারী প্রধান শিক্ষক (ইংরেজি বিভাগ)"
+                         data-qualification="এম.এ (ইংরেজি), এম.এড"
+                         data-image="https://bracjpgsph.org/assets/front/images/about/staff/Fahmida_Akter__12572.jpg"
+                         data-joining="জুলাই ১০, ২০০৮"
+                         data-subjects="English Grammar, English Literature, Communicative English"
+                         data-experience="১৭ বছরের অধিক"
+                         data-bio="মিসেস ফাহমিদা আক্তার একজন দূরদর্শী শিক্ষাবিদ এবং দক্ষ প্রশাসক। তিনি ইংরেজি বিষয়ে পাঠদানের পাশাপাশি স্কুলের একাডেমিক কার্যক্রমে গুরুত্বপূর্ণ অবদান রাখেন। তাঁর নেতৃত্বে শিক্ষার্থীরা জাতীয় ও আন্তর্জাতিক পর্যায়ে বিভিন্ন প্রতিযোগিতায় সাফল্য অর্জন করেছে।"
+                         data-email="fahmida.akter@example.com"
+                         data-phone="01xxxxxxxxx">
+                        <div class="teacher-card-image-wrapper">
+                            <img src="https://bracjpgsph.org/assets/front/images/about/staff/Fahmida_Akter__12572.jpg" alt="ফাহমিদা আক্তার" class="teacher-card-photo">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">ফাহমিদা আক্তার</h3>
+                            <p class="teacher-card-designation">সহকারী প্রধান শিক্ষক</p>
+                        </div>
+                    </div>
+
+                    <!-- Teacher Card 3 (Placeholder Image) -->
+                    <div class="teacher-profile-card"
+                         data-name="আব্দুল হামিদ"
+                         data-designation="সিনিয়র শিক্ষক (গণিত বিভাগ)"
+                         data-qualification="এম.এসসি (গণিত), বি.এড"
+                         data-image="https://thepixelcurve.com/wp/edubin/wp-content/uploads/2019/04/t20-5.jpg"
+                         data-joining="জানুয়ারি ৫, ২০১২"
+                         data-subjects="সাধারণ গণিত, উচ্চতর গণিত, পরিসংখ্যান"
+                         data-experience="১২ বছরের অধিক"
+                         data-bio="জনাব আব্দুল হামিদ গণিত বিষয়টিকে শিক্ষার্থীদের কাছে সহজ ও আনন্দদায়ক করে তুলতে বিশেষ পারদর্শী। তিনি বিভিন্ন গাণিতিক সমস্যা সমাধানের নতুন নতুন কৌশল অবলম্বন করেন এবং শিক্ষার্থীদের গাণিতিক মেধা বিকাশে সহায়তা করেন।"
+                         data-email="abdul.hamid@example.com">
+                        <div class="teacher-card-image-wrapper">
+                            <img src="https://thepixelcurve.com/wp/edubin/wp-content/uploads/2019/04/t20-5.jpg" alt="আব্দুল হামিদ" class="teacher-card-photo">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">আব্দুল হামিদ</h3>
+                            <p class="teacher-card-designation">সিনিয়র শিক্ষক (গণিত)</p>
+                        </div>
+                    </div>
+
+                    <!-- Teacher Card 4 -->
+                    <div class="teacher-profile-card"
+                         data-name="সালমা খাতুন"
+                         data-designation="সহকারী শিক্ষক (বিজ্ঞান বিভাগ)"
+                         data-qualification="বি.এসসি (পদার্থবিজ্ঞান), বি.এড"
+                         data-image="https://www.maldenblueandgold.com/wp-content/uploads/2017/09/DSCN0322-1-e1506611764886-768x781.jpg"
+                         data-joining="ফেব্রুয়ারি ২০, ২০১৫"
+                         data-subjects="পদার্থবিজ্ঞান, রসায়ন, জীববিজ্ঞান"
+                         data-experience="৯ বছরের অধিক"
+                         data-bio="মিস সালমা খাতুন বিজ্ঞান শিক্ষাকে হাতে-কলমে প্রয়োগের মাধ্যমে শিক্ষার্থীদের মধ্যে বৈজ্ঞানিক অনুসন্ধিৎসা জাগ্রত করতে সচেষ্ট। তিনি বিভিন্ন বিজ্ঞান মেলা ও প্রজেক্টে শিক্ষার্থীদের উৎসাহিত করেন।"
+                         data-email="salma.khatun@example.com">
+                        <div class="teacher-card-image-wrapper">
+                            <img src="https://www.maldenblueandgold.com/wp-content/uploads/2017/09/DSCN0322-1-e1506611764886-768x781.jpg" alt="সালমা খাতুন" class="teacher-card-photo">
+                        </div>
+                        <div class="teacher-card-info">
+                            <h3 class="teacher-card-name">সালমা খাতুন</h3>
+                            <p class="teacher-card-designation">সহকারী শিক্ষক (বিজ্ঞান)</p>
+                        </div>
+                    </div>
+
+                    <!-- আরও শিক্ষকের কার্ড এখানে যোগ করুন -->
+
+                </div> <!-- .teachers-grid-container শেষ -->
+            </div> <!-- .container শেষ -->
+        </section> <!-- .teachers-list-section শেষ -->
+    </main>
+
+    <!-- Modal HTML (এটি <main> ট্যাগের বাইরে, body এর আগে বসানো ভালো) -->
+    <div class="modal-teacher-overlay" id="teacherDetailModalOverlay">
+        <div class="modal-teacher-container" id="teacherDetailModalContainer">
+            <button class="modal-teacher-close-btn" id="teacherModalCloseBtn" aria-label="বন্ধ করুন">&times;</button>
+            <div class="modal-teacher-content" id="teacherModalDetailedContent">
+                <!-- কন্টেন্ট JavaScript দিয়ে পূর্ণ হবে -->
+                <div class="modal-profile-header">
+                    <img src="" alt="শিক্ষকের ছবি" id="modalProfileImage" class="modal-profile-photo">
+                    <div class="modal-profile-basic-info">
+                        <h2 id="modalProfileName"></h2>
+                        <p id="modalProfileDesignation"></p>
+                        <p id="modalProfileQualification"></p>
+                    </div>
+                </div>
+                <div class="modal-profile-body">
+                    <div class="detail-block">
+                        <h4><i class="fas fa-calendar-alt"></i> কর্মজীবনের তথ্য</h4>
+                        <p><strong>যোগদানের তারিখ:</strong> <span id="modalProfileJoining"></span></p>
+                        <p><strong>পঠিত বিষয়সমূহ:</strong> <span id="modalProfileSubjects"></span></p>
+                        <p><strong>অভিজ্ঞতা:</strong> <span id="modalProfileExperience"></span></p>
+                    </div>
+                    <div class="detail-block">
+                        <h4><i class="fas fa-user-circle"></i> সংক্ষিপ্ত পরিচিতি</h4>
+                        <p id="modalProfileBio"></p>
+                    </div>
+                    <div class="detail-block modal-profile-contact">
+                        <h4><i class="fas fa-address-book"></i> যোগাযোগের তথ্য</h4>
+                        <p id="modalContactEmailWrapper" style="display:none;"><i class="fas fa-envelope"></i> ইমেইল: <a href="#" id="modalContactEmailLink"></a></p>
+                        <p id="modalContactPhoneWrapper" style="display:none;"><i class="fas fa-phone-square-alt"></i> ফোন: <span id="modalContactPhone"></span></p>
+                        <p id="modalContactLinkedInWrapper" style="display:none;"><i class="fab fa-linkedin"></i> লিঙ্কডইন: <a href="#" id="modalContactLinkedInLink" target="_blank" rel="noopener noreferrer">প্রোফাইল দেখুন</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ============================================= -->
+    <!-- Footer Section -->
+    <!-- ============================================= -->
+    <footer class="footer">
+        <div class="container footer-main-content">
+            <div class="footer-column footer-about">
+                <h3 class="footer-school-name">আলোকছায়া হাই স্কুল</h3>
+                <p class="footer-tagline">আলোকের পথে এগিয়ে চলি</p>
+                <div class="footer-social-icons">
+                    <a href="https://facebook.com/your-school-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com/your-school-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="mailto:info@alokchhayaschool.edu.bd" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <!-- আপনি চাইলে আরও সোশ্যাল আইকন যোগ করতে পারেন -->
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
+                </div>
+            </div>
+
+            <div class="footer-column footer-quick-links">
+                <h4 class="footer-col-title">দ্রুত লিঙ্ক</h4>
+                <ul>
+                    <li><a href="/">হোম</a></li>
+                    <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                    <li><a href="classes.html">শ্রেণিসমূহ</a></li>
+                    <li><a href="notice.html">নোটিশ বোর্ড</a></li>
+                    <li><a href="admission.html">ভর্তি</a></li>
+                    <li><a href="contact.html">যোগাযোগ</a></li> <!-- contact.html পেজের লিঙ্ক -->
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact-info">
+                <h4 class="footer-col-title">যোগাযোগের তথ্য</h4>
+                <p><i class="fas fa-map-marker-alt"></i> ঠিকানা: আলোকছায়া হাই স্কুল রোড,<br>ঢাকা, বাংলাদেশ</p>
+                <p><i class="fas fa-phone-alt"></i> ফোন: ০২-xxxxxxxxx</p>
+                <p><i class="fas fa-envelope"></i> ইমেইল: info@alokchhayaschool.edu.bd</p>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="container footer-bottom-content"> <!-- নতুন ক্লাস যোগ করা হলো -->
+                <p class="copyright-text">&copy; <span id="current-year"></span> আলোকছায়া হাই স্কুল। সকল অধিকার সংরক্ষিত।</p>
+                <p class="designer-credit">ডিজাইন করেছেন: <a href="https://mohiuddinmunna.netlify.app" target="_blank" rel="noopener noreferrer">মহিউদ্দিন মুন্না</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script> <!-- আপনার মূল JavaScript ফাইল -->
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আলোকছায়া হাই স্কুল</title>
+
+    <!-- Google Fonts (Hind Siliguri & Noto Sans Bengali) -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (for icons, e.g., hamburger menu, gallery arrows) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================= -->
+    <!-- Navbar Section -->
+    <!-- ============================================= -->
+    <header class="header fixed-navbar"> <!-- নতুন ক্লাস fixed-navbar যোগ করা হলো -->
+        <nav class="navbar container">
+            <div class="nav-branding">
+                <!-- অপশন ১: শুধুমাত্র স্কুলের নাম -->
+                <a href="/" class="nav-logo-text">আলোকছায়া হাই স্কুল</a>
+
+                <!-- অপশন ২: স্কুলের লোগো এবং নাম (লোগো থাকলে এটি ব্যবহার করুন) -->
+                <!--
+                <a href="/" class="nav-logo-link">
+                    <img src="images/school-logo.png" alt="আলোকছায়া হাই স্কুল লোগো" class="school-logo-img">
+                    <span class="nav-logo-text-with-image">আলোকছায়া হাই স্কুল</span>
+                </a>
+                -->
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link active">হোম</a> <!-- index.html এর জন্য active -->
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">আমাদের সম্পর্কে</a>
+                </li>
+                <li class="nav-item">
+                    <a href="classes.html" class="nav-link">শ্রেণিসমূহ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="notice.html" class="nav-link">নোটিশ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="admission.html" class="nav-link">ভর্তি</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">যোগাযোগ</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+    <!-- 1. Hero Section -->
+        <!-- ============================================= -->
+        <section id="hero" class="hero-section">
+            <div class="hero-slider-container">
+                <!-- এখানে স্লাইড ইমেজগুলো যুক্ত হবে -->
+                <!-- উদাহরণস্বরূপ: -->
+                <div class="hero-slide" style="background-image: url('https://file.portal.gov.bd/uploads/3e0c2689-ad93-48c2-931e-bcfc9e125e78//680/203/196/6802031963860191451218.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://file-dhaka.portal.gov.bd/uploads/d546fedc-302c-41f6-bee1-d98a14f65337//656/366/6f0/6563666f00752880818333.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://st4.depositphotos.com/12722406/39166/i/450/depositphotos_391660528-stock-photo-bangladeshi-school-students-stand-alignment.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://wikimedia.org.bd/images/Wikipedia_School_Program_at_Agrabad_Government_Colony_High_School_Boys_Section_01.JPG');"></div>
+                <div class="hero-slide" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d8/Bangla_Wikipedia_School_Program_at_Agrabad_Government_Colony_High_School_%28Girls%27_Section%29_21.JPG');"></div>
+                <!-- আপনার প্রয়োজন অনুযায়ী আরও স্লাইড যোগ করতে পারেন -->
+            </div>
+            <div class="hero-overlay"></div> <!-- ছবির উপরে রঙের আভা -->
+            <div class="hero-content-wrapper">
+                <div class="hero-content-box">
+                    <h1>আলোকছায়া হাই স্কুল<br>শিক্ষার আলোয় আগামীর পথচলা</h1>
+                    <p>শিক্ষা, সংস্কৃতি ও প্রগতির মেলবন্ধন। আসুন, জ্ঞানের আলোয় আলোকিত হই।</p>
+                    <!-- আপনি চাইলে এখানে একটি বাটনও যোগ করতে পারেন -->
+                    <!-- <a href="#admission-info" class="btn btn-primary hero-btn">ভর্তি তথ্য</a> -->
+                </div>
+            </div>
+            <div class="hero-dots-container">
+                <!-- স্লাইডার ডটগুলো JavaScript দিয়ে তৈরি হবে -->
+            </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- About Us Section (আমাদের সম্পর্কে - সংক্ষিপ্ত) -->
+        <!-- ============================================= -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <h2 class="section-title">আমাদের সম্পর্কে</h2>
+                <div class="about-content-grid">
+                    <div class="about-text-content">
+                        <p>আলোকছায়া হাই স্কুল একটি ঐতিহ্যবাহী শিক্ষা প্রতিষ্ঠান, যেখানে শিক্ষার্থীদের শুধু পুঁথিগত বিদ্যাই নয়, বরং তাদের মাঝে মানবিক গুণাবলী, নৈতিকতা ও নেতৃত্বের বিকাশ ঘটানো হয়। আমরা ৬ষ্ঠ থেকে ১০ম শ্রেণি পর্যন্ত মানসম্মত শিক্ষা প্রদানের পাশাপাশি শিক্ষার্থীদের সৃজনশীল প্রতিভার বিকাশে সর্বদা সচেষ্ট।</p>
+                        <p>আমাদের অভিজ্ঞ শিক্ষকবৃন্দ আধুনিক শিক্ষাপদ্ধতি অনুসরণ করে প্রতিটি শিক্ষার্থীর ব্যক্তিগত সক্ষমতা অনুযায়ী পাঠদান করে থাকেন। একটি নিরাপদ ও অনুপ্রেরণাদায়ক পরিবেশে শিক্ষার্থীরা যেন নিজেদের বিকশিত করতে পারে, সেটাই আমাদের প্রধান লক্ষ্য।</p>
+                        <div class="about-read-more-btn-container">
+                            <a href="about.html" class="btn btn-primary">বিস্তারিত জানুন</a>
+                        </div>
+                    </div>
+                    <div class="about-image-content">
+                        <img src="https://file-dhaka.portal.gov.bd/uploads/d546fedc-302c-41f6-bee1-d98a14f65337//656/366/6f0/6563666f00752880818333.jpg" alt="আলোকছায়া হাই স্কুল এর ক্যাম্পাস">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ============================================= -->
+        <!-- Classes Section (শ্রেণিসমূহ) -->
+        <!-- ============================================= -->
+        <section id="classes" class="classes-section section-padding">
+            <div class="container">
+                <h2 class="section-title">শ্রেণিসমূহ</h2>
+                <div class="classes-grid">
+                    <div class="class-card">
+                        <h3 class="class-name">৬ষ্ঠ শ্রেণি</h3>
+                        <p class="class-description">মাধ্যমিক শিক্ষার শুরু</p>
+                    </div>
+                    <div class="class-card">
+                        <h3 class="class-name">৭ম শ্রেণি</h3>
+                        <p class="class-description">বিজ্ঞান ও গণিতের ভিত্তি</p>
+                    </div>
+                    <div class="class-card">
+                        <h3 class="class-name">৮ম শ্রেণি</h3>
+                        <p class="class-description">সৃজনশীল চিন্তার বিকাশ</p>
+                    </div>
+                    <div class="class-card">
+                        <h3 class="class-name">৯ম শ্রেণি</h3>
+                        <p class="class-description">বিভাগ নির্বাচনের প্রস্তুতি</p>
+                    </div>
+                    <div class="class-card">
+                        <h3 class="class-name">১০ম শ্রেণি</h3>
+                        <p class="class-description">এসএসসি পরীক্ষার প্রস্তুতি</p>
+                    </div>
+                    <!-- আপনি চাইলে আরও শ্রেণি যোগ করতে পারেন -->
+                    <!-- <div class="class-card">
+                        <h3 class="class-name">একাদশ শ্রেণি</h3>
+                        <p class="class-description">উচ্চ মাধ্যমিকের পথে</p>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================= -->
+        <!-- Notice Board Section (নোটিশ বোর্ড) -->
+        <!-- ============================================= -->
+        <section id="notice-board" class="notice-section section-padding">
+            <div class="container">
+                <h2 class="section-title">নোটিশ বোর্ড</h2>
+                <div class="notice-items-container">
+                    <div class="notice-item notice-highlight"> <!-- প্রথম নোটিশের জন্য হাইলাইট ক্লাস -->
+                        <div class="notice-date">১৫ জুন, ২০২৪</div>
+                        <p class="notice-text">নতুন শিক্ষাবর্ষে ভর্তির আবেদন শুরু। আবেদনের শেষ তারিখ ৩০ জুলাই, ২০২৪।</p>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-date">১০ জুন, ২০২৪</div>
+                        <p class="notice-text">বার্ষিক ক্রীড়া প্রতিযোগিতা অনুষ্ঠিত হবে ৩০ জুন, ২০২৪ তারিখে।</p>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-date">০৮ জুন, ২০২৪</div>
+                        <p class="notice-text">অর্ধবার্ষিক পরীক্ষার ফলাফল প্রকাশিত হয়েছে। ফলাফল দেখতে স্কুলে যোগাযোগ করুন।</p>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-date">০২ জুন, ২০২৪</div>
+                        <p class="notice-text">সাংস্কৃতিক অনুষ্ঠান আয়োজিত হবে ২৮ জুন, ২০২৪ তারিখ বিকেল ৪টায়।</p>
+                    </div>
+                    <!-- আপনি চাইলে আরও নোটিশ যোগ করতে পারেন -->
+                </div>
+                <div class="notice-all-btn-container text-center">
+                    <a href="notice.html" class="btn btn-secondary">সকল নোটিশ দেখুন</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ============================================= -->
+        <!-- Gallery Section (গ্যালারি) -->
+        <!-- ============================================= -->
+        <section id="gallery" class="gallery-section section-padding">
+            <div class="container">
+                <h2 class="section-title">গ্যালারি</h2>
+                <div class="gallery-slider-wrapper">
+                    <div class="gallery-slides-container">
+                        <!-- স্লাইড আইটেমগুলো এখানে যুক্ত হবে -->
+                        <div class="gallery-slide-item active">
+                            <img src="https://wikimedia.org.bd/images/Wikipedia_School_Program_at_Agrabad_Government_Colony_High_School_Boys_Section_01.JPG" alt="গ্যালারি চিত্র ১ - স্কুলের বার্ষিক ক্রীড়া">
+                            <div class="gallery-caption">বার্ষিক ক্রীড়া প্রতিযোগিতা</div>
+                        </div>
+                        <div class="gallery-slide-item">
+                            <img src="images/gallery-img-2.jpg" alt="গ্যালারি চিত্র ২ - শ্রেণিকক্ষে পাঠদান">
+                            <div class="gallery-caption">শ্রেণিকক্ষে পাঠদান</div>
+                        </div>
+                        <div class="gallery-slide-item">
+                            <img src="images/gallery-img-3.jpg" alt="গ্যালারি চিত্র ৩ - বিজ্ঞান মেলা">
+                            <div class="gallery-caption">বিজ্ঞান মেলা</div>
+                        </div>
+                        <div class="gallery-slide-item">
+                            <img src="images/gallery-img-4.jpg" alt="গ্যালারি চিত্র ৪ - সাংস্কৃতিক অনুষ্ঠান">
+                            <div class="gallery-caption">সাংস্কৃতিক অনুষ্ঠান</div>
+                        </div>
+                        <!-- আপনার প্রয়োজন অনুযায়ী আরও স্লাইড যোগ করতে পারেন -->
+                    </div>
+                    <!-- Navigation Arrows -->
+                    <button class="gallery-nav-btn prev-btn" aria-label="Previous Slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="gallery-nav-btn next-btn" aria-label="Next Slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ============================================= -->
+        <!-- Headmaster's Message Section (প্রধান শিক্ষকের বার্তা) -->
+        <!-- ============================================= -->
+        <section id="headmaster-message" class="headmaster-section section-padding">
+            <div class="container">
+                <h2 class="section-title">প্রধান শিক্ষকের বার্তা</h2>
+                <div class="headmaster-content-wrapper">
+                    <div class="headmaster-photo-container">
+                        <img src="images/headmaster.png" alt="প্রধান শিক্ষক, আলোকছায়া হাই স্কুল" class="headmaster-photo">
+                    </div>
+                    <div class="headmaster-message-content">
+                        <blockquote class="message-quote">
+                            <p>"আলোকছায়া হাই স্কুল আপনাদের স্বাগতম। আমাদের লক্ষ্য শুধু একাডেমিক সফলতাই নয়, বরং প্রতিটি শিক্ষার্থীকে একজন সুশিক্ষিত, দেশপ্রেমিক ও মানবিক গুণসম্পন্ন নাগরিক হিসেবে গড়ে তোলা।"</p>
+                            <p>"আমাদের অভিজ্ঞ শিক্ষকবৃন্দ এবং আধুনিক শিক্ষা পদ্ধতির মাধ্যমে আমরা শিক্ষার্থীদের মেধা বিকাশে সর্বোচ্চ সহায়তা করি। আমি বিশ্বাস করি, এখানকার শিক্ষার্থীরা ভবিষ্যতে দেশ ও জাতির গর্ব হবে।"</p>
+                        </blockquote>
+                        <div class="headmaster-info">
+                            <p class="headmaster-name">মোঃ আব্দুল করিম</p>
+                            <p class="headmaster-designation">প্রধান শিক্ষক</p>
+                            <p class="school-name-ref">আলোকছায়া হাই স্কুল</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ============================================= -->
+        <!-- Admission Info Section (ভর্তি তথ্য) -->
+        <!-- ============================================= -->
+        <section id="admission-info" class="admission-section section-padding">
+            <div class="container">
+                <h2 class="section-title">ভর্তি তথ্য</h2>
+                <div class="admission-content-grid">
+                    <div class="admission-left-column">
+                        <div class="admission-block">
+                            <h3 class="admission-subtitle">ভর্তির যোগ্যতা</h3>
+                            <ul class="admission-list">
+                                <li><i class="fas fa-check-circle"></i> ৬ষ্ঠ শ্রেণি: প্রাথমিক শিক্ষা সমাপনী পাস</li>
+                                <li><i class="fas fa-check-circle"></i> ৭ম-১০ম শ্রেণি: পূর্ববর্তী শ্রেণিতে উত্তীর্ণ</li>
+                                <li><i class="fas fa-check-circle"></i> বয়স সীমা: ১০-১৬ বছর</li>
+                            </ul>
+                        </div>
+                        <div class="admission-block">
+                            <h3 class="admission-subtitle">প্রয়োজনীয় কাগজপত্র</h3>
+                            <ul class="admission-list">
+                                <li><i class="fas fa-check-circle"></i> পূরণকৃত আবেদনপত্র</li>
+                                <li><i class="fas fa-check-circle"></i> পূর্ববর্তী শ্রেণির সনদপত্র</li>
+                                <li><i class="fas fa-check-circle"></i> জন্ম নিবন্ধনের সত্যায়িত কপি</li>
+                                <li><i class="fas fa-check-circle"></i> অভিভাবকের জাতীয় পরিচয়পত্রের কপি</li>
+                                <li><i class="fas fa-check-circle"></i> পাসপোর্ট সাইজের ছবি (৩ কপি)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="admission-right-column">
+                        <div class="admission-block">
+                            <h3 class="admission-subtitle">ভর্তি ফি</h3>
+                            <table class="admission-fees-table">
+                                <thead>
+                                    <tr>
+                                        <th>শ্রেণি</th>
+                                        <th>ফি (টাকা)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>৬ষ্ঠ শ্রেণি</td>
+                                        <td>৫,০০০</td>
+                                    </tr>
+                                    <tr>
+                                        <td>৭ম শ্রেণি</td>
+                                        <td>৫,৫০০</td>
+                                    </tr>
+                                    <tr>
+                                        <td>৮ম শ্রেণি</td>
+                                        <td>৬,০০০</td>
+                                    </tr>
+                                    <tr>
+                                        <td>৯ম শ্রেণি</td>
+                                        <td>৬,৫০০</td>
+                                    </tr>
+                                    <tr>
+                                        <td>১০ম শ্রেণি</td>
+                                        <td>৭,০০০</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- ============================================= -->
+        <!-- Contact Form Section (যোগাযোগ) -->
+        <!-- ============================================= -->
+        <section id="contact-form-section" class="contact-form-section section-padding">
+            <div class="container">
+                <h2 class="section-title">যোগাযোগ করুন</h2>
+                <div class="contact-form-wrapper">
+                    <form action="#" method="POST" class="contact-form" id="mainContactForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="contactName" class="form-label">আপনার নাম</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="contactName" name="name" class="form-control" placeholder="সম্পূর্ণ নাম লিখুন" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail" class="form-label">আপনার ইমেইল</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="contactEmail" name="email" class="form-control" placeholder="ইমেইল ঠিকানা লিখুন" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone" class="form-label">ফোন নম্বর (ঐচ্ছিক)</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="ফোন নম্বর লিখুন">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject" class="form-label">বিষয়</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-tag"></i>
+                                    <input type="text" id="contactSubject" name="subject" class="form-control" placeholder="বার্তার বিষয় লিখুন" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-fullwidth">
+                            <label for="contactMessage" class="form-label">আপনার বার্তা</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-comment-dots"></i>
+                                <textarea id="contactMessage" name="message" class="form-control" rows="6" placeholder="আপনার বিস্তারিত বার্তা লিখুন" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-fullwidth text-center">
+                            <button type="submit" class="btn btn-primary btn-submit-contact">বার্তা পাঠান</button>
+                        </div>
+                    </form>
+                    <div id="form-status-message" class="form-status"></div> <!-- Form submission status message -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- (অন্যান্য সেকশনগুলোর placeholder এখানে যুক্ত হবে) -->
+
+    </main>
+
+
+    <!-- ============================================= -->
+    <!-- Footer Section -->
+    <!-- ============================================= -->
+    <footer class="footer">
+        <div class="container footer-main-content">
+            <div class="footer-column footer-about">
+                <h3 class="footer-school-name">আলোকছায়া হাই স্কুল</h3>
+                <p class="footer-tagline">আলোকছায়া হাই স্কুল - যেখানে প্রতিটি শিক্ষার্থীর মেধা পায় পূর্ণতা, আর চরিত্র পায় সঠিক পথের দিশা।</p>
+                <div class="footer-social-icons">
+                    <a href="https://facebook.com/your-school-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com/your-school-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="mailto:info@alokchhayaschool.edu.bd" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <!-- আপনি চাইলে আরও সোশ্যাল আইকন যোগ করতে পারেন -->
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
+                </div>
+            </div>
+
+            <div class="footer-column footer-quick-links">
+                <h4 class="footer-col-title">দ্রুত লিঙ্ক</h4>
+                <ul>
+                    <li><a href="/">হোম</a></li>
+                    <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                    <li><a href="classes.html">শ্রেণিসমূহ</a></li>
+                    <li><a href="notice.html">নোটিশ বোর্ড</a></li>
+                    <li><a href="admission.html">ভর্তি</a></li>
+                    <li><a href="contact.html">যোগাযোগ</a></li> <!-- contact.html পেজের লিঙ্ক -->
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact-info">
+                <h4 class="footer-col-title">যোগাযোগের তথ্য</h4>
+                <p><i class="fas fa-map-marker-alt"></i> ঠিকানা: আলোকছায়া হাই স্কুল রোড,<br>ঢাকা, বাংলাদেশ</p>
+                <p><i class="fas fa-phone-alt"></i> ফোন: ০২-xxxxxxxxx</p>
+                <p><i class="fas fa-envelope"></i> ইমেইল: info@alokchhayaschool.edu.bd</p>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="container footer-bottom-content"> <!-- নতুন ক্লাস যোগ করা হলো -->
+                <p class="copyright-text">&copy; <span id="current-year"></span> আলোকছায়া হাই স্কুল। সকল অধিকার সংরক্ষিত।</p>
+                <p class="designer-credit">ডিজাইন করেছেন: <a href="https://mohiuddinmunna.netlify.app" target="_blank" rel="noopener noreferrer">মহিউদ্দিন মুন্না</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Custom JavaScript (যদি প্রয়োজন হয়, সবার শেষে) -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আলোকছায়া হাই স্কুল</title> <!-- পেজের টাইটেল পরিবর্তন হতে পারে -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"> <!-- আপনার মূল CSS ফাইল -->
+</head>
+<body>
+
+    <!-- ============================================= -->
+    <!-- Navbar Section -->
+    <!-- ============================================= -->
+    <header class="header fixed-navbar"> <!-- নতুন ক্লাস fixed-navbar যোগ করা হলো -->
+        <nav class="navbar container">
+            <div class="nav-branding">
+                <!-- অপশন ১: শুধুমাত্র স্কুলের নাম -->
+                <a href="/" class="nav-logo-text">আলোকছায়া হাই স্কুল</a>
+
+                <!-- অপশন ২: স্কুলের লোগো এবং নাম (লোগো থাকলে এটি ব্যবহার করুন) -->
+                <!--
+                <a href="/" class="nav-logo-link">
+                    <img src="images/school-logo.png" alt="আলোকছায়া হাই স্কুল লোগো" class="school-logo-img">
+                    <span class="nav-logo-text-with-image">আলোকছায়া হাই স্কুল</span>
+                </a>
+                -->
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">হোম</a> <!-- index.html এর জন্য active -->
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link active">আমাদের সম্পর্কে</a>
+                </li>
+                <li class="nav-item">
+                    <a href="classes.html" class="nav-link">শ্রেণিসমূহ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="notice.html" class="nav-link">নোটিশ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="admission.html" class="nav-link">ভর্তি</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">যোগাযোগ</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content"> <!-- Navbar এর নিচে main কন্টেন্ট শুরু -->
+        <!-- ============================================= -->
+        <!-- About Us Page Content (আমাদের সম্পর্কে) -->
+        <!-- ============================================= -->
+        <section class="about-page-hero" style="background-image: url('images/about-hero-bg.jpg');">
+            <div class="container">
+                <h1 class="page-main-title">আমাদের সম্পর্কে</h1>
+                <div class="breadcrumb">
+                    <a href="/">হোম</a> <i class="fas fa-angle-right"></i> <span>আমাদের সম্পর্কে</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-detailed-section section-padding">
+            <div class="container">
+                <article class="about-article">
+                    <!-- ভূমিকা -->
+                    <div class="about-block">
+                        <h2 class="about-subtitle"><i class="fas fa-landmark"></i> ভূমিকা</h2>
+                        <p>আলোকছায়া হাই স্কুল এই অঞ্চলের একটি স্বনামধন্য এবং ঐতিহ্যবাহী বিদ্যাপীঠ। শিক্ষার আলো বিতরণের মহান ব্রত নিয়ে এই স্কুলটি [প্রতিষ্ঠার সাল লিখুন, যেমন: ১৯৭৫] সালে প্রতিষ্ঠিত হয়েছিল। প্রতিষ্ঠার পর থেকে স্কুলটি অগণিত শিক্ষার্থীর জীবনে জ্ঞান, নৈতিকতা এবং মানবিকতার আলো ছড়িয়ে আসছে। আমরা বিশ্বাস করি, প্রতিটি শিক্ষার্থীই অপার সম্ভাবনাময়, আর সেই সম্ভাবনাকে বিকশিত করার জন্য একটি সঠিক পরিচর্যা ও উপযুক্ত পরিবেশ অপরিহার্য। আলোকছায়া হাই স্কুল সেই পরিবেশ নিশ্চিত করতে দৃঢ়প্রতিজ্ঞ।</p>
+                    </div>
+
+                    <!-- ইতিহাস -->
+                    <div class="about-block">
+                        <h2 class="about-subtitle"><i class="fas fa-history"></i> আমাদের ইতিহাস</h2>
+                        <p>[এখানে স্কুলের প্রতিষ্ঠার প্রেক্ষাপট, প্রতিষ্ঠাতা সদস্যগণ (যদি প্রযোজ্য হয়), সময়ের সাথে সাথে স্কুলের ক্রমবিকাশ, গুরুত্বপূর্ণ মাইলফলক ইত্যাদি সম্পর্কে বিস্তারিত লিখুন। যেমন: "স্কুলটি প্রথমে একটি ছোট পরিসরে যাত্রা শুরু করলেও, এলাকাবাসীর অকুণ্ঠ সহযোগিতা এবং শিক্ষকদের নিরলস পরিশ্রমে এটি ধীরে ধীরে আজকের এই অবস্থানে এসে দাঁড়িয়েছে। বিভিন্ন সময়ে অবকাঠামোগত উন্নয়ন এবং শিক্ষাদান পদ্ধতির আধুনিকায়নের মাধ্যমে স্কুলটি তার শ্রেষ্ঠত্ব বজায় রেখেছে..."]</p>
+                        <p>[আরও একটি বা দুটি অনুচ্ছেদ যোগ করতে পারেন ইতিহাসের বিস্তারিত জানাতে।]</p>
+                    </div>
+
+                    <!-- লক্ষ্য ও উদ্দেশ্য -->
+                    <div class="about-block">
+                        <h2 class="about-subtitle"><i class="fas fa-bullseye"></i> আমাদের লক্ষ্য ও উদ্দেশ্য</h2>
+                        <div class="mission-vision-grid">
+                            <div class="mission-vision-item">
+                                <h4><i class="fas fa-lightbulb"></i> আমাদের লক্ষ্য (Mission)</h4>
+                                <p>শিক্ষার্থীদের মধ্যে জ্ঞান আহরণের অদম্য স্পৃহা তৈরি করা, তাদের সুপ্ত প্রতিভার বিকাশ ঘটানো এবং তাদেরকে নৈতিক ও মানবিক মূল্যবোধে উদ্বুদ্ধ করে দেশ ও সমাজের জন্য কল্যাণকর সুনাগরিক হিসেবে গড়ে তোলা।</p>
+                            </div>
+                            <div class="mission-vision-item">
+                                <h4><i class="fas fa-binoculars"></i> আমাদের উদ্দেশ্য (Vision)</h4>
+                                <p>আলোকছায়া হাই স্কুলকে একটি उत्कृष्ट শিক্ষা প্রতিষ্ঠানে পরিণত করা, যেখানে শিক্ষার্থীরা আধুনিক ও যুগোপযোগী শিক্ষার মাধ্যমে বিশ্বমানের চ্যালেঞ্জ মোকাবেলায় সক্ষম হবে এবং সমাজে ইতিবাচক পরিবর্তন আনতে নেতৃত্ব দেবে।</p>
+                            </div>
+                        </div>
+                        <h4 style="margin-top: 25px; color: var(--deep-blue);"><i class="fas fa-check-double"></i> প্রধান উদ্দেশ্যসমূহ:</h4>
+                        <ul class="custom-list">
+                            <li>মানসম্মত ও জীবনমুখী শিক্ষা প্রদান নিশ্চিত করা।</li>
+                            <li>শিক্ষার্থীদের মধ্যে সৃজনশীলতা, উদ্ভাবনী ক্ষমতা এবং সমালোচনামূলক চিন্তাভাবনার বিকাশ ঘটানো।</li>
+                            <li>তথ্যপ্রযুক্তিভিত্তিক আধুনিক শিক্ষাদান পদ্ধতির প্রয়োগ।</li>
+                            <li>খেলাধুলা ও সহশিক্ষা কার্যক্রমের মাধ্যমে শারীরিক ও মানসিক বিকাশ সাধন।</li>
+                            <li>শিক্ষক, শিক্ষার্থী এবং অভিভাবকদের মধ্যে একটি সৌহার্দ্যপূর্ণ সম্পর্ক স্থাপন।</li>
+                            <li>একটি নিরাপদ, পরিচ্ছন্ন এবং শিক্ষাবান্ধব পরিবেশ বজায় রাখা।</li>
+                        </ul>
+                    </div>
+
+                    <!-- প্রধান শিক্ষকের বাণী -->
+                    <div class="about-block headmaster-message-detailed">
+                        <h2 class="about-subtitle"><i class="fas fa-user-tie"></i> প্রধান শিক্ষকের বাণী</h2>
+                        <div class="message-content-wrapper">
+                            <img src="images/headmaster.png" alt="প্রধান শিক্ষক" class="headmaster-photo-detailed">
+                            <div class="message-text">
+                                <p>"আলোকছায়া হাই স্কুলের পক্ষ থেকে সকলকে জানাই আন্তরিক শুভেচ্ছা ও অভিনন্দন। একটি ঐতিহ্যবাহী শিক্ষা প্রতিষ্ঠান হিসেবে আমাদের মূল লক্ষ্য হলো শিক্ষার্থীদের শুধু একাডেমিক শিক্ষায় শিক্ষিত করে তোলাই নয়, বরং তাদেরকে সৎ, চরিত্রবান, দেশপ্রেমিক এবং সর্বোপরি একজন ভালো মানুষ হিসেবে গড়ে তোলা। আমরা বিশ্বাস করি, শিক্ষাই জাতির মেরুদণ্ড এবং শিক্ষকেরাই সেই মেরুদণ্ড গড়ার কারিগর।"</p>
+                                <p>"আমাদের অভিজ্ঞ ও নিবেদিতপ্রাণ শিক্ষকগণ প্রতিনিয়ত চেষ্টা করে যাচ্ছেন শিক্ষার্থীদের জন্য একটি আনন্দময় ও শিক্ষার্থীবান্ধব পরিবেশ তৈরি করতে। আমরা আধুনিক প্রযুক্তির সমন্বয়ে পাঠদানকে আরও আকর্ষণীয় ও ফলপ্রসূ করার জন্য সচেষ্ট। খেলাধুলা, সাংস্কৃতিক কার্যক্রমসহ বিভিন্ন সহশিক্ষা কার্যক্রমে অংশগ্রহণের মাধ্যমে শিক্ষার্থীরা তাদের সুপ্ত প্রতিভার বিকাশ ঘটাতে পারে, সেদিকেও আমরা সমান গুরুত্ব দিয়ে থাকি।"</p>
+                                <p>"আমি আশা করি, আমাদের শিক্ষার্থী, শিক্ষক, অভিভাবক এবং পরিচালনা পর্ষদের সকলের সম্মিলিত প্রচেষ্টায় আলোকছায়া হাই স্কুল শিক্ষার আলোকবর্তিকা হিসেবে তার অগ্রযাত্রা অব্যাহত রাখবে। আপনাদের সকলের সহযোগিতা একান্তভাবে কাম্য।"</p>
+                                <div class="signature">
+                                    <p><strong>মোঃ আব্দুল করিম</strong></p>
+                                    <p>প্রধান শিক্ষক</p>
+                                    <p>আলোকছায়া হাই স্কুল</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- অবকাঠামোগত সুবিধা -->
+                    <div class="about-block">
+                        <h2 class="about-subtitle"><i class="fas fa-building"></i> অবকাঠামোগত সুবিধা</h2>
+                        <div class="infrastructure-grid">
+                            <div class="infrastructure-item">
+                                <img src="https://projonmonews24.com/uploads/news/81679/1694410591062-01.jpeg" alt="স্কুল লাইব্রেরি">
+                                <h4><i class="fas fa-book-reader"></i> সমৃদ্ধ লাইব্রেরি</h4>
+                                <p>শিক্ষার্থীদের জ্ঞানার্জনের জন্য রয়েছে বিভিন্ন ধরনের বই, জার্নাল ও রেফারেন্স সামগ্রী সমৃদ্ধ একটি আধুনিক লাইব্রেরি।</p>
+                            </div>
+                            <div class="infrastructure-item">
+                                <img src="https://zcbmc.edu.bd/wp-content/uploads/elementor/thumbs/Science-Lab-qc74cxf3fhp0i2rhiovjk8vwqpkbjlc5904ojy6eci.jpg" alt="বিজ্ঞানাগার">
+                                <h4><i class="fas fa-flask"></i> আধুনিক বিজ্ঞানাগার</h4>
+                                <p>পদার্থবিজ্ঞান, রসায়ন ও জীববিজ্ঞানের ব্যবহারিক ক্লাসের জন্য সুসজ্জিত ও আধুনিক যন্ত্রপাতি সমৃদ্ধ বিজ্ঞানাগার।</p>
+                            </div>
+                            <div class="infrastructure-item">
+                                <img src="https://uits.edu.bd/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-26-at-11.27.29-AM.jpeg" alt="কম্পিউটার ল্যাব">
+                                <h4><i class="fas fa-laptop-code"></i> কম্পিউটার ল্যাব</h4>
+                                <p>তথ্যপ্রযুক্তি শিক্ষাকে গুরুত্ব দিয়ে শিক্ষার্থীদের জন্য ইন্টারনেট সংযোগসহ আধুনিক কম্পিউটার ল্যাবের সুব্যবস্থা।</p>
+                            </div>
+                            <div class="infrastructure-item">
+                                <img src="https://cdn.bdnews24.com/bdnews24/media/bdnews24-english/import/hello/2020/07/16/school-170720-08.jpg" alt="খেলার মাঠ">
+                                <h4><i class="fas fa-futbol"></i> খেলার মাঠ</h4>
+                                <p>শিক্ষার্থীদের শারীরিক ও মানসিক বিকাশের জন্য একটি প্রশস্ত খেলার মাঠ রয়েছে, যেখানে বিভিন্ন ধরনের খেলার আয়োজন করা হয়।</p>
+                            </div>
+                        </div>
+                        <p style="margin-top: 20px;">এছাড়াও রয়েছে মাল্টিমিডিয়া ক্লাসরুম, কমনরুম, বিশুদ্ধ পানির সুব্যবস্থা এবং স্বাস্থ্যসম্মত স্যানিটেশন ব্যবস্থা।</p>
+                    </div>
+
+                    <!-- শিক্ষকমণ্ডলী (সংক্ষিপ্ত) -->
+                    <div class="about-block">
+                        <h2 class="about-subtitle"><i class="fas fa-chalkboard-teacher"></i> আমাদের অভিজ্ঞ শিক্ষকমণ্ডলী</h2>
+                        <p>আলোকছায়া হাই স্কুলে একদল মেধাবী, অভিজ্ঞ এবং নিবেদিতপ্রাণ শিক্ষক রয়েছেন, যারা শিক্ষার্থীদের সঠিক পথে পরিচালিত করতে সর্বদা সচেষ্ট। শিক্ষাদানে তাদের দক্ষতা এবং আন্তরিকতা আমাদের স্কুলের অন্যতম শক্তি। আমাদের শিক্ষকমণ্ডলী নিয়মিত প্রশিক্ষণ গ্রহণ করেন এবং আধুনিক শিক্ষাপদ্ধতির সাথে নিজেদের আপডেট রাখেন।</p>
+                        <!-- এখানে চাইলে শিক্ষকদের তালিকা বা ছবিসহ সংক্ষিপ্ত পরিচিতি যোগ করার জন্য আলাদা সেকশন বা পেজের লিঙ্ক দেওয়া যেতে পারে -->
+                        <div class="text-center" style="margin-top: 20px;">
+                            <a href="teachers.html" class="btn btn-secondary">সকল শিক্ষকবৃন্দ</a> <!-- (ভবিষ্যতে শিক্ষকদের জন্য আলাদা পেজ তৈরি করলে লিঙ্ক করতে পারেন) -->
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- ============================================= -->
+    <!-- Footer Section -->
+    <!-- ============================================= -->
+    <footer class="footer">
+        <div class="container footer-main-content">
+            <div class="footer-column footer-about">
+                <h3 class="footer-school-name">আলোকছায়া হাই স্কুল</h3>
+                <p class="footer-tagline">আলোকের পথে এগিয়ে চলি</p>
+                <div class="footer-social-icons">
+                    <a href="https://facebook.com/your-school-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com/your-school-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="mailto:info@alokchhayaschool.edu.bd" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <!-- আপনি চাইলে আরও সোশ্যাল আইকন যোগ করতে পারেন -->
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
+                </div>
+            </div>
+
+            <div class="footer-column footer-quick-links">
+                <h4 class="footer-col-title">দ্রুত লিঙ্ক</h4>
+                <ul>
+                    <li><a href="/">হোম</a></li>
+                    <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                    <li><a href="classes.html">শ্রেণিসমূহ</a></li>
+                    <li><a href="notice.html">নোটিশ বোর্ড</a></li>
+                    <li><a href="admission.html">ভর্তি</a></li>
+                    <li><a href="contact.html">যোগাযোগ</a></li> <!-- contact.html পেজের লিঙ্ক -->
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact-info">
+                <h4 class="footer-col-title">যোগাযোগের তথ্য</h4>
+                <p><i class="fas fa-map-marker-alt"></i> ঠিকানা: আলোকছায়া হাই স্কুল রোড,<br>ঢাকা, বাংলাদেশ</p>
+                <p><i class="fas fa-phone-alt"></i> ফোন: ০২-xxxxxxxxx</p>
+                <p><i class="fas fa-envelope"></i> ইমেইল: info@alokchhayaschool.edu.bd</p>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="container footer-bottom-content"> <!-- নতুন ক্লাস যোগ করা হলো -->
+                <p class="copyright-text">&copy; <span id="current-year"></span> আলোকছায়া হাই স্কুল। সকল অধিকার সংরক্ষিত।</p>
+                <p class="designer-credit">ডিজাইন করেছেন: <a href="https://mohiuddinmunna.netlify.app" target="_blank" rel="noopener noreferrer">মহিউদ্দিন মুন্না</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script> <!-- আপনার মূল JavaScript ফাইল -->
+</body>
+</html>

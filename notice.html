@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আলোকছায়া হাই স্কুল</title> <!-- পেজের টাইটেল পরিবর্তন হতে পারে -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"> <!-- আপনার মূল CSS ফাইল -->
+</head>
+<body>
+
+    <!-- ============================================= -->
+    <!-- Navbar Section -->
+    <!-- ============================================= -->
+    <header class="header fixed-navbar"> <!-- নতুন ক্লাস fixed-navbar যোগ করা হলো -->
+        <nav class="navbar container">
+            <div class="nav-branding">
+                <!-- অপশন ১: শুধুমাত্র স্কুলের নাম -->
+                <a href="/" class="nav-logo-text">আলোকছায়া হাই স্কুল</a>
+
+                <!-- অপশন ২: স্কুলের লোগো এবং নাম (লোগো থাকলে এটি ব্যবহার করুন) -->
+                <!--
+                <a href="index.html" class="nav-logo-link">
+                    <img src="images/school-logo.png" alt="আলোকছায়া হাই স্কুল লোগো" class="school-logo-img">
+                    <span class="nav-logo-text-with-image">আলোকছায়া হাই স্কুল</span>
+                </a>
+                -->
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">হোম</a> <!-- index.html এর জন্য active -->
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">আমাদের সম্পর্কে</a>
+                </li>
+                <li class="nav-item">
+                    <a href="classes.html" class="nav-link">শ্রেণিসমূহ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="notice.html" class="nav-link active">নোটিশ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="admission.html" class="nav-link">ভর্তি</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">যোগাযোগ</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content"> <!-- Navbar এর নিচে main কন্টেন্ট শুরু -->
+        <!-- ============================================= -->
+        <!-- Notice Page Hero/Title Section -->
+        <!-- ============================================= -->
+        <section class="page-title-hero notice-page-hero" style="background-image: url('images/notice-hero-bg.jpg');">
+            <div class="container">
+                <h1 class="page-main-title">নোটিশ বোর্ড</h1>
+                <div class="breadcrumb">
+                    <a href="/">হোম</a> <i class="fas fa-angle-right"></i> <span>নোটিশ বোর্ড</span>
+                </div>
+            </div>
+        </section>
+    
+        <!-- ============================================= -->
+        <!-- All Notices Section -->
+        <!-- ============================================= -->
+        <section class="all-notices-section section-padding">
+            <div class="container">
+                <div class="section-intro-text text-center">
+                    <p>আলোকছায়া হাই স্কুলের সকল সাম্প্রতিক ঘোষণা, পরীক্ষার রুটিন, ফলাফল, ভর্তি সংক্রান্ত বিজ্ঞপ্তি এবং অন্যান্য গুরুত্বপূর্ণ তথ্য এখানে পাওয়া যাবে। অনুগ্রহ করে নিয়মিত নোটিশ বোর্ড দেখুন।</p>
+                </div>
+    
+                <!-- Optional: Notice Filter/Search Bar -->
+                
+                <!-- <div class="notice-filter-bar">
+                    <input type="text" placeholder="নোটিশ খুঁজুন..." class="notice-search-input">
+                    <select class="notice-category-select">
+                        <option value="">সকল ক্যাটাগরি</option>
+                        <option value="exam">পরীক্ষা সংক্রান্ত</option>
+                        <option value="admission">ভর্তি সংক্রান্ত</option>
+                        <option value="event">অনুষ্ঠান</option>
+                        <option value="general">সাধারণ বিজ্ঞপ্তি</option>
+                    </select>
+                    <button class="btn btn-primary notice-filter-btn">অনুসন্ধান</button>
+                </div> -->
+               
+    
+                <div class="notices-list-container">
+                    <!-- নোটিশ আইটেম ১ -->
+                    <div class="notice-list-item">
+                        <div class="notice-item-header">
+                            <span class="notice-item-date"><i class="fas fa-calendar-alt"></i> ২০ জুলাই, ২০২৪</span>
+                            <span class="notice-item-category general-notice">সাধারণ</span>
+                        </div>
+                        <h3 class="notice-item-title">আগামীকালের বিশেষ অ্যাসেম্বলি সংক্রান্ত বিজ্ঞপ্তি</h3>
+                        <p class="notice-item-summary">এতদ্বারা আলোকছায়া হাই স্কুলের সকল শিক্ষার্থী ও শিক্ষকবৃন্দের অবগতির জন্য জানানো যাচ্ছে যে, আগামী ২১ জুলাই, ২০২৪ তারিখে সকাল ৯:০০ ঘটিকায় স্কুলের মাঠে একটি বিশেষ অ্যাসেম্বলির আয়োজন করা হয়েছে। উক্ত অ্যাসেম্বলিতে প্রধান অতিথি হিসেবে উপস্থিত থাকবেন...</p>
+                        <div class="notice-item-actions">
+                            <a href="notice-detail-1.html" class="btn btn-outline-primary btn-sm">বিস্তারিত দেখুন</a>
+                            <!-- <a href="notices/pdf/notice-assembly.pdf" class="btn btn-outline-secondary btn-sm" download><i class="fas fa-download"></i> ডাউনলোড (PDF)</a> -->
+                        </div>
+                    </div>
+    
+                    <!-- নোটিশ আইটেম ২ -->
+                    <div class="notice-list-item">
+                        <div class="notice-item-header">
+                            <span class="notice-item-date"><i class="fas fa-calendar-alt"></i> ১৫ জুলাই, ২০২৪</span>
+                            <span class="notice-item-category exam-notice">পরীক্ষা</span>
+                        </div>
+                        <h3 class="notice-item-title">অর্ধবার্ষিক পরীক্ষার সময়সূচী - ২০২৪</h3>
+                        <p class="notice-item-summary">২০২৪ সালের অর্ধবার্ষিক পরীক্ষার সময়সূচী প্রকাশিত হয়েছে। পরীক্ষা আগামী ০১ আগস্ট, ২০২৪ থেকে শুরু হবে। বিস্তারিত সময়সূচী নিচের লিঙ্ক থেকে ডাউনলোড করা যাবে অথবা স্কুলের নোটিশ বোর্ডে দেখা যাবে।</p>
+                        <div class="notice-item-actions">
+                            <!-- <a href="notice-detail-2.html" class="btn btn-outline-primary btn-sm">বিস্তারিত দেখুন</a> -->
+                            <a href="notices/pdf/half-yearly-routine-2024.pdf" class="btn btn-outline-secondary btn-sm" download><i class="fas fa-download"></i> রুটিন ডাউনলোড (PDF)</a>
+                        </div>
+                    </div>
+    
+                    <!-- নোটিশ আইটেম ৩ -->
+                    <div class="notice-list-item notice-list-item-highlight"> <!-- হাইলাইটেড নোটিশ -->
+                        <div class="notice-item-header">
+                            <span class="notice-item-date"><i class="fas fa-calendar-alt"></i> ১০ জুলাই, ২০২৪</span>
+                            <span class="notice-item-category admission-notice">ভর্তি</span>
+                        </div>
+                        <h3 class="notice-item-title">২০২৫ শিক্ষাবর্ষে ৬ষ্ঠ শ্রেণিতে ভর্তির আবেদন গ্রহণ চলছে</h3>
+                        <p class="notice-item-summary">আলোকছায়া হাই স্কুলে ২০২৫ শিক্ষাবর্ষে ৬ষ্ঠ শ্রেণিতে ছাত্রছাত্রী ভর্তির জন্য আবেদনপত্র বিতরণ ও জমা নেওয়া শুরু হয়েছে। আবেদনের শেষ তারিখ ৩০ জুলাই, ২০২৪। বিস্তারিত তথ্য স্কুলের ওয়েবসাইট অথবা অফিস থেকে জানা যাবে।</p>
+                        <div class="notice-item-actions">
+                            <a href="../index.html#admission-info" class="btn btn-outline-primary btn-sm">ভর্তি তথ্য দেখুন</a>
+                        </div>
+                    </div>
+    
+                    <!-- নোটিশ আইটেম ৪ -->
+                    <div class="notice-list-item">
+                        <div class="notice-item-header">
+                            <span class="notice-item-date"><i class="fas fa-calendar-alt"></i> ০৫ জুলাই, ২০২৪</span>
+                            <span class="notice-item-category event-notice">অনুষ্ঠান</span>
+                        </div>
+                        <h3 class="notice-item-title">বার্ষিক সাংস্কৃতিক অনুষ্ঠান ও পুরস্কার বিতরণী</h3>
+                        <p class="notice-item-summary">আগামী ১৫ আগস্ট, ২০২৪ তারিখে স্কুলের মিলনায়তনে বার্ষিক সাংস্কৃতিক অনুষ্ঠান এবং কৃতি শিক্ষার্থীদের মাঝে পুরস্কার বিতরণ করা হবে। সকল শিক্ষার্থী, অভিভাবক ও শুভানুধ্যায়ীদের অনুষ্ঠানে আমন্ত্রণ জানানো হচ্ছে।</p>
+                        <div class="notice-item-actions">
+                            <a href="#" class="btn btn-outline-primary btn-sm">বিস্তারিত দেখুন</a>
+                        </div>
+                    </div>
+    
+                    <!-- আরও নোটিশ আইটেম এখানে যোগ করুন -->
+    
+                </div> <!-- .notices-list-container শেষ -->
+    
+            </div> <!-- .container শেষ -->
+        </section> <!-- .all-notices-section শেষ -->
+    </main>
+
+    <!-- ============================================= -->
+    <!-- Footer Section -->
+    <!-- ============================================= -->
+    <footer class="footer">
+        <div class="container footer-main-content">
+            <div class="footer-column footer-about">
+                <h3 class="footer-school-name">আলোকছায়া হাই স্কুল</h3>
+                <p class="footer-tagline">আলোকের পথে এগিয়ে চলি</p>
+                <div class="footer-social-icons">
+                    <a href="https://facebook.com/your-school-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com/your-school-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="mailto:info@alokchhayaschool.edu.bd" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <!-- আপনি চাইলে আরও সোশ্যাল আইকন যোগ করতে পারেন -->
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
+                </div>
+            </div>
+
+            <div class="footer-column footer-quick-links">
+                <h4 class="footer-col-title">দ্রুত লিঙ্ক</h4>
+                <ul>
+                    <li><a href="/">হোম</a></li>
+                    <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                    <li><a href="classes.html">শ্রেণিসমূহ</a></li>
+                    <li><a href="notice.html">নোটিশ বোর্ড</a></li>
+                    <li><a href="admission.html">ভর্তি</a></li>
+                    <li><a href="contact.html">যোগাযোগ</a></li> <!-- contact.html পেজের লিঙ্ক -->
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact-info">
+                <h4 class="footer-col-title">যোগাযোগের তথ্য</h4>
+                <p><i class="fas fa-map-marker-alt"></i> ঠিকানা: আলোকছায়া হাই স্কুল রোড,<br>ঢাকা, বাংলাদেশ</p>
+                <p><i class="fas fa-phone-alt"></i> ফোন: ০২-xxxxxxxxx</p>
+                <p><i class="fas fa-envelope"></i> ইমেইল: info@alokchhayaschool.edu.bd</p>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="container footer-bottom-content"> <!-- নতুন ক্লাস যোগ করা হলো -->
+                <p class="copyright-text">&copy; <span id="current-year"></span> আলোকছায়া হাই স্কুল। সকল অধিকার সংরক্ষিত।</p>
+                <p class="designer-credit">ডিজাইন করেছেন: <a href="https://mohiuddinmunna.netlify.app" target="_blank" rel="noopener noreferrer">মহিউদ্দিন মুন্না</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script> <!-- আপনার মূল JavaScript ফাইল -->
+</body>
+</html>

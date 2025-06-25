@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আলোকছায়া হাই স্কুল</title> <!-- পেজের টাইটেল পরিবর্তন হতে পারে -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css"> <!-- আপনার মূল CSS ফাইল -->
+</head>
+<body>
+
+    <!-- ============================================= -->
+    <!-- Navbar Section -->
+    <!-- ============================================= -->
+    <header class="header fixed-navbar"> <!-- নতুন ক্লাস fixed-navbar যোগ করা হলো -->
+        <nav class="navbar container">
+            <div class="nav-branding">
+                <!-- অপশন ১: শুধুমাত্র স্কুলের নাম -->
+                <a href="/" class="nav-logo-text">আলোকছায়া হাই স্কুল</a>
+
+                <!-- অপশন ২: স্কুলের লোগো এবং নাম (লোগো থাকলে এটি ব্যবহার করুন) -->
+                <!--
+                <a href="index.html" class="nav-logo-link">
+                    <img src="images/school-logo.png" alt="আলোকছায়া হাই স্কুল লোগো" class="school-logo-img">
+                    <span class="nav-logo-text-with-image">আলোকছায়া হাই স্কুল</span>
+                </a>
+                -->
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">হোম</a> <!-- index.html এর জন্য active -->
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">আমাদের সম্পর্কে</a>
+                </li>
+                <li class="nav-item">
+                    <a href="classes.html" class="nav-link">শ্রেণিসমূহ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="notice.html" class="nav-link">নোটিশ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="admission.html" class="nav-link active">ভর্তি</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">যোগাযোগ</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content"> <!-- Navbar এর নিচে main কন্টেন্ট শুরু -->
+        <!-- ============================================= -->
+        <!-- Admission Page Hero/Title Section -->
+        <!-- ============================================= -->
+        <section class="page-title-hero admission-page-hero" style="background-image: url('images/admission-hero-bg.jpg');">
+            <div class="container">
+                <h1 class="page-main-title">ভর্তি সংক্রান্ত তথ্য</h1>
+                <div class="breadcrumb">
+                    <a href="/">হোম</a> <i class="fas fa-angle-right"></i> <span>ভর্তি</span>
+                </div>
+            </div>
+        </section>
+    
+        <!-- ============================================= -->
+        <!-- Detailed Admission Information Section -->
+        <!-- ============================================= -->
+        <section class="detailed-admission-section section-padding">
+            <div class="container">
+                <div class="section-intro-text text-center">
+                    <p>আলোকছায়া হাই স্কুলে আপনার সন্তানকে স্বাগত জানাতে আমরা অধীর আগ্রহী। আমাদের ভর্তি প্রক্রিয়া অত্যন্ত স্বচ্ছ এবং মেধার ভিত্তিতে পরিচালিত হয়। নিচে ভর্তি সংক্রান্ত বিস্তারিত তথ্য এবং নিয়মাবলী তুলে ধরা হলো।</p>
+                </div>
+    
+                <div class="admission-info-layout">
+                    <!-- Left Column: Eligibility, Documents, Process -->
+                    <div class="admission-main-content">
+                        <!-- ভর্তির যোগ্যতা -->
+                        <div class="admission-info-block">
+                            <h2 class="admission-block-title"><i class="fas fa-check-double"></i> ভর্তির সাধারণ যোগ্যতা</h2>
+                            <ul class="custom-list-admission">
+                                <li><strong>ষষ্ঠ শ্রেণি:</strong> প্রাথমিক শিক্ষা সমাপনী (পিইসি) বা সমমানের পরীক্ষায় উত্তীর্ণ হতে হবে।</li>
+                                <li><strong>সপ্তম - নবম শ্রেণি:</strong> পূর্ববর্তী শ্রেণি থেকে বার্ষিক পরীক্ষায় সফলভাবে উত্তীর্ণ হতে হবে এবং ছাড়পত্র (TC) জমা দিতে হবে। (আসন খালি থাকা সাপেক্ষে)</li>
+                                <li><strong>বয়স সীমা:</strong> সরকারি নিয়ম অনুযায়ী নির্ধারিত বয়সসীমার মধ্যে থাকতে হবে (যেমন, ষষ্ঠ শ্রেণির জন্য সাধারণত ১০+ বছর)।</li>
+                                <li>স্কুলের নির্ধারিত নিয়মাবলী ও শৃঙ্খলা মেনে চলার মানসিকতা থাকতে হবে।</li>
+                            </ul>
+                        </div>
+    
+                        <!-- প্রয়োজনীয় কাগজপত্র -->
+                        <div class="admission-info-block">
+                            <h2 class="admission-block-title"><i class="fas fa-file-alt"></i> প্রয়োজনীয় কাগজপত্র</h2>
+                            <p>ভর্তির সময় নিম্নোক্ত কাগজপত্র অবশ্যই জমা দিতে হবে:</p>
+                            <ul class="custom-list-admission documents-list">
+                                <li><i class="fas fa-file-signature"></i> পূরণকৃত ভর্তি ফরম (স্কুল অফিস থেকে সংগ্রহ অথবা ওয়েবসাইট থেকে ডাউনলোড করা)।</li>
+                                <li><i class="fas fa-id-card"></i> শিক্ষার্থীর জন্ম নিবন্ধনের সত্যায়িত ফটোকপি।</li>
+                                <li><i class="fas fa-user-graduate"></i> পূর্ববর্তী শ্রেণির পরীক্ষার নম্বরপত্র/মার্কশিটের সত্যায়িত ফটোকপি।</li>
+                                <li><i class="fas fa-school"></i> পূর্ববর্তী শিক্ষা প্রতিষ্ঠান থেকে প্রাপ্ত ছাড়পত্র (Transcript/Transfer Certificate) (ষষ্ঠ শ্রেণি ব্যতীত)।</li>
+                                <li><i class="fas fa-image"></i> শিক্ষার্থীর সদ্য তোলা পাসপোর্ট সাইজের রঙিন ছবি (সাধারণত ২-৪ কপি)।</li>
+                                <li><i class="fas fa-users"></i> পিতা ও মাতার জাতীয় পরিচয়পত্রের (NID) ফটোকপি।</li>
+                                <li><i class="fas fa-user-shield"></i> অভিভাবকের (Guardian) জাতীয় পরিচয়পত্রের ফটোকপি (যদি পিতা-মাতা ব্যতীত অন্য কেউ অভিভাবক হন)।</li>
+                            </ul>
+                            <p class="note"><em>সকল কাগজপত্রের মূল কপি ভর্তির সময় প্রদর্শনের জন্য সাথে আনতে হতে পারে।</em></p>
+                        </div>
+    
+                        <!-- ভর্তি প্রক্রিয়া -->
+                        <div class="admission-info-block">
+                            <h2 class="admission-block-title"><i class="fas fa-tasks"></i> ভর্তি প্রক্রিয়া</h2>
+                            <ol class="admission-process-list">
+                                <li><span>১</span>নির্ধারিত সময়ের মধ্যে স্কুল অফিস থেকে ভর্তি ফরম সংগ্রহ করুন অথবা স্কুলের ওয়েবসাইট থেকে ডাউনলোড করুন।</li>
+                                <li><span>২</span>সঠিকভাবে ফরম পূরণ করে প্রয়োজনীয় কাগজপত্রসহ স্কুল অফিসে জমা দিন।</li>
+                                <li><span>৩</span>(যদি প্রযোজ্য হয়) ভর্তি পরীক্ষার জন্য প্রবেশপত্র সংগ্রহ করুন এবং নির্ধারিত তারিখে পরীক্ষায় অংশগ্রহণ করুন।</li>
+                                <li><span>৪</span>ভর্তি পরীক্ষার ফলাফল প্রকাশের পর উত্তীর্ণ শিক্ষার্থীরা নির্দিষ্ট সময়ের মধ্যে ভর্তি ফি জমা দিয়ে ভর্তি সম্পন্ন করবে।</li>
+                                <li><span>৫</span>ভর্তি সংক্রান্ত সকল তথ্য স্কুলের নোটিশ বোর্ড এবং ওয়েবসাইটে প্রকাশ করা হবে।</li>
+                            </ol>
+                        </div>
+    
+                        <!-- ভর্তি পরীক্ষার তথ্য (যদি থাকে) -->
+                        <div class="admission-info-block">
+                            <h2 class="admission-block-title"><i class="fas fa-pencil-alt"></i> ভর্তি পরীক্ষা (প্রযোজ্য ক্ষেত্রে)</h2>
+                            <p>সাধারণত [কোন কোন শ্রেণির জন্য প্রযোজ্য, যেমন: ষষ্ঠ ও নবম] শ্রেণিতে সীমিত সংখ্যক শূন্য আসনের বিপরীতে ভর্তি পরীক্ষার মাধ্যমে শিক্ষার্থী নির্বাচন করা হয়। ভর্তি পরীক্ষার বিষয়সমূহ ও মানবন্টন নিম্নরূপ:</p>
+                            <ul class="custom-list-admission">
+                                <li><strong>বাংলা:</strong> [নম্বর, যেমন: ৩০ নম্বর]</li>
+                                <li><strong>ইংরেজি:</strong> [নম্বর, যেমন: ৩০ নম্বর]</li>
+                                <li><strong>গণিত:</strong> [নম্বর, যেমন: ৪০ নম্বর]</li>
+                            </ul>
+                            <p>ভর্তি পরীক্ষার তারিখ, সময় ও কেন্দ্র পরবর্তীতে নোটিশের মাধ্যমে জানিয়ে দেওয়া হবে। পরীক্ষার জন্য পূর্ববর্তী শ্রেণির পাঠ্যক্রম অনুসরণ করা হবে।</p>
+                            <p class="note"><em>ভর্তি পরীক্ষার নিয়মাবলী স্কুল কর্তৃপক্ষের সিদ্ধান্ত অনুযায়ী পরিবর্তিত হতে পারে।</em></p>
+                        </div>
+                    </div>
+    
+                    <!-- Right Sidebar: Fees, Important Dates, Contact -->
+                    <aside class="admission-sidebar">
+                        <div class="sidebar-widget">
+                            <h3 class="sidebar-widget-title">ভর্তি ফি ও অন্যান্য খরচ</h3>
+                            <table class="fees-table-sidebar">
+                                <thead>
+                                    <tr>
+                                        <th>শ্রেণি</th>
+                                        <th>ভর্তি ফি (এককালীন)</th>
+                                        <th>মাসিক বেতন</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ষষ্ঠ</td>
+                                        <td>৳ ৫,০০০</td>
+                                        <td>৳ ২,০০০</td>
+                                    </tr>
+                                    <tr>
+                                        <td>সপ্তম</td>
+                                        <td>৳ ৫,৫০০</td>
+                                        <td>৳ ২,০০০</td>
+                                    </tr>
+                                    <tr>
+                                        <td>অষ্টম</td>
+                                        <td>৳ ৬,০০০</td>
+                                        <td>৳ ২,২০০</td>
+                                    </tr>
+                                    <tr>
+                                        <td>নবম (বিজ্ঞান)</td>
+                                        <td>৳ ৭,০০০</td>
+                                        <td>৳ ২,৫০০</td>
+                                    </tr>
+                                    <tr>
+                                        <td>নবম (অন্যান্য)</td>
+                                        <td>৳ ৬,৫০০</td>
+                                        <td>৳ ২,৩০০</td>
+                                    </tr>
+                                    <tr>
+                                        <td>দশম</td>
+                                        <td>পুনঃভর্তি ফি</td>
+                                        <td>পুরবরতি</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="note" style="font-size: 0.85rem; margin-top: 10px;"><em>*অন্যান্য ফি (যেমন সেশন চার্জ, পরীক্ষার ফি) স্কুল কর্তৃক নির্ধারিত নিয়ম অনুযায়ী প্রযোজ্য হবে।</em></p>
+                        </div>
+    
+                        <div class="sidebar-widget">
+                            <h3 class="sidebar-widget-title">গুরুত্বপূর্ণ তারিখসমূহ</h3>
+                            <ul class="important-dates-list">
+                                <li><i class="fas fa-calendar-check"></i> ভর্তি ফরম বিতরণ শুরু: <strong>[তারিখ, যেমন: ১ নভেম্বর, ২০২৪]</strong></li>
+                                <li><i class="fas fa-calendar-times"></i> ফরম জমা দেওয়ার শেষ তারিখ: <strong>[তারিখ, যেমন: ৩০ নভেম্বর, ২০২৪]</strong></li>
+                                <li><i class="fas fa-calendar-day"></i> ভর্তি পরীক্ষা (প্রযোজ্য ক্ষেত্রে): <strong>[তারিখ, যেমন: ১৫ ডিসেম্বর, ২০২৪]</strong></li>
+                                <li><i class="fas fa-bullhorn"></i> ফলাফল প্রকাশ: <strong>[তারিখ, যেমন: ২০ ডিসেম্বর, ২০২৪]</strong></li>
+                                <li><i class="fas fa-user-check"></i> ভর্তি কার্যক্রম: <strong>[তারিখ থেকে তারিখ, যেমন: ২১-৩০ ডিসেম্বর, ২০২৪]</strong></li>
+                            </ul>
+                        </div>
+    
+                        <div class="sidebar-widget">
+                            <h3 class="sidebar-widget-title">যোগাযোগ (ভর্তি শাখা)</h3>
+                            <p><i class="fas fa-phone-alt"></i> ফোন: [ভর্তি শাখার ফোন নম্বর]</p>
+                            <p><i class="fas fa-envelope"></i> ইমেইল: admission@alokchhayaschool.edu.bd</p>
+                            <p><i class="fas fa-clock"></i> অফিস সময়: সকাল ৯:০০ - বিকাল ৪:০০ (শনি-বৃহস্পতিবার)</p>
+                            <a href="contact.html" class="btn btn-primary btn-block mt-3">বিস্তারিত যোগাযোগ</a>
+                        </div>
+    
+                        <div class="sidebar-widget">
+                            <h3 class="sidebar-widget-title">ভর্তি ফরম ডাউনলোড</h3>
+                            <a href="admissions/files/admission_form_2025.pdf" class="btn btn-secondary btn-block" download>
+                                <i class="fas fa-download"></i> ভর্তি ফরম (PDF)
+                            </a>
+                            <a href="admissions/files/prospectus_2025.pdf" class="btn btn-outline-secondary btn-block mt-2" download>
+                                <i class="fas fa-book-open"></i> প্রসপেক্টাস (PDF)
+                            </a>
+                        </div>
+                    </aside>
+                </div> <!-- .admission-info-layout শেষ -->
+            </div> <!-- .container শেষ -->
+        </section> <!-- .detailed-admission-section শেষ -->
+    </main>
+
+
+
+    <!-- ============================================= -->
+    <!-- Footer Section -->
+    <!-- ============================================= -->
+    <footer class="footer">
+        <div class="container footer-main-content">
+            <div class="footer-column footer-about">
+                <h3 class="footer-school-name">আলোকছায়া হাই স্কুল</h3>
+                <p class="footer-tagline">আলোকের পথে এগিয়ে চলি</p>
+                <div class="footer-social-icons">
+                    <a href="https://facebook.com/your-school-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com/your-school-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="mailto:info@alokchhayaschool.edu.bd" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <!-- আপনি চাইলে আরও সোশ্যাল আইকন যোগ করতে পারেন -->
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
+                </div>
+            </div>
+
+            <div class="footer-column footer-quick-links">
+                <h4 class="footer-col-title">দ্রুত লিঙ্ক</h4>
+                <ul>
+                    <li><a href="#hero">হোম</a></li>
+                    <li><a href="#about">আমাদের সম্পর্কে</a></li>
+                    <li><a href="#classes">শ্রেণিসমূহ</a></li>
+                    <li><a href="#notice-board">নোটিশ বোর্ড</a></li>
+                    <li><a href="#admission-info">ভর্তি</a></li>
+                    <li><a href="contact.html">যোগাযোগ</a></li> <!-- contact.html পেজের লিঙ্ক -->
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact-info">
+                <h4 class="footer-col-title">যোগাযোগের তথ্য</h4>
+                <p><i class="fas fa-map-marker-alt"></i> ঠিকানা: আলোকছায়া হাই স্কুল রোড,<br>ঢাকা, বাংলাদেশ</p>
+                <p><i class="fas fa-phone-alt"></i> ফোন: ০২-xxxxxxxxx</p>
+                <p><i class="fas fa-envelope"></i> ইমেইল: info@alokchhayaschool.edu.bd</p>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="container footer-bottom-content"> <!-- নতুন ক্লাস যোগ করা হলো -->
+                <p class="copyright-text">&copy; <span id="current-year"></span> আলোকছায়া হাই স্কুল। সকল অধিকার সংরক্ষিত।</p>
+                <p class="designer-credit">ডিজাইন করেছেন: <a href="https://mohiuddinmunna.netlify.app" target="_blank" rel="noopener noreferrer">মহিউদ্দিন মুন্না</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script> <!-- আপনার মূল JavaScript ফাইল -->
+</body>
+</html>

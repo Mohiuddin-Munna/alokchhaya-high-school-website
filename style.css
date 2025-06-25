@@ -1,0 +1,2661 @@
+/* === GOOGLE FONTS === */
+/* (index.html এ লিঙ্ক করা হয়েছে) */
+
+/* === CSS VARIABLES === */
+:root {
+    /* Colors */
+    --deep-blue: #0A3D62;
+    --golden-yellow: #F9A825;
+    --soft-white: #FFFFFF;
+    --light-gray: #f4f7f6; /* For light backgrounds */
+    --dark-gray: #333333; /* For primary text */
+    --medium-gray: #555555; /* For secondary text */
+    --success-green: #2ecc71;
+    --info-blue: #3498db;
+    --warning-orange: #e67e22;
+    --danger-red: #e74c3c;
+
+    /* ... অন্যান্য ভেরিয়েবল ... */
+    --golden-yellow-rgb: 249, 168, 37; /* For rgba usage */
+
+    /* Typography */
+    --heading-font: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
+    --body-font: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
+    --base-font-size: 16px; /* Default font size */
+
+    /* Layout */
+    --container-width: 1200px; /* Max width for content container */
+    --gutter-width: 15px; /* Gutter for container padding */
+    --nav-height: 70px; /* Navbar height, can be adjusted */
+
+    /* Transitions & Shadows */
+    --transition-speed: 0.3s;
+    --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --box-shadow-medium: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* === RESET AND BASE STYLES === */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: var(--base-font-size);
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--dark-gray);
+    background-color: var(--soft-white);
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
+    -webkit-font-smoothing: antialiased; /* Smoother fonts on WebKit browsers */
+    -moz-osx-font-smoothing: grayscale; /* Smoother fonts on Firefox */
+}
+
+/* Base body style to prevent scroll when mobile menu is open */
+body.no-scroll {
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent by default */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below images */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--deep-blue); /* Default heading color */
+    font-weight: 600; /* Default heading weight */
+    line-height: 1.3;
+    margin-bottom: 0.75rem; /* Default bottom margin for headings */
+}
+
+/* === UTILITY CLASSES === */
+.container {
+    width: 90%; /* For smaller screens */
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--gutter-width);
+    padding-right: var(--gutter-width);
+}
+
+.section-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.bg-light {
+    background-color: var(--light-gray);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--deep-blue);
+}
+
+.text-accent {
+    color: var(--golden-yellow);
+}
+
+/* Common Button Style (can be extended) */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    font-family: var(--body-font);
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    border: 1px solid transparent; /* Base border */
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--golden-yellow);
+    color: var(--deep-blue);
+    font-weight: 600;
+}
+.btn-primary:hover {
+    background-color: #e09311; /* Darker golden yellow */
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--deep-blue);
+    color: var(--soft-white);
+}
+.btn-secondary:hover {
+    background-color: #082f4e; /* Darker deep blue */
+    transform: translateY(-2px);
+}
+
+/* Main content area should start below fixed navbar */
+main {
+    padding-top: var(--nav-height); /* Adjust if navbar height changes */
+}
+
+
+/* === NAVBAR STYLES === */
+.site-header {
+    background-color: var(--deep-blue);
+    color: var(--soft-white);
+    padding: 0 15px; /* Navbar এর ডানে-বামে প্যাডিং (কন্টেইনারের বাইরে) */
+    transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    z-index: 1000;
+}
+
+/* === Header Scrolled এর সময় ব্লার করার জন্য === */
+
+.site-header.scrolled {
+    background-color: rgba(10, 61, 98, 0.95);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2); 
+}
+/* === Header Scrolled এর সময় ব্লার করার জন্য উপরের কোড === *
+/* === NAVBAR STYLES === */
+.header {
+    background-color: var(--deep-blue);
+    color: var(--soft-white);
+    padding: 0 var(--gutter-width); /* Navbar এর ডানে-বামে প্যাডিং */
+    transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    z-index: 1000; /* অন্যান্য এলিমেন্টের উপরে থাকবে */
+}
+
+.header.scrolled {
+    background-color: rgba(10, 61, 98, 0.95); /* var(--deep-blue) এর একটি হালকা স্বচ্ছ ভার্সন */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header.fixed-navbar {
+    position: fixed; /* Navbar ফিক্সড থাকবে */
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar এর নিচের কন্টেন্ট যেন Navbar এর নিচে শুরু হয় */
+/* এই main padding-top টি বেস স্টাইলে আগেই যোগ করা হয়েছে, 
+   যদি না থাকে তাহলে এখানে যোগ করুন অথবা বেস স্টাইল থেকে ব্যবহার করুন */
+/*
+main {
+    padding-top: var(--nav-height);
+}
+*/
+
+
+.navbar { /* .container ক্লাসও এর সাথে যুক্ত */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--nav-height); /* :root থেকে ভেরিয়েবল */
+    width: 100%; /* কন্টেইনারের সম্পূর্ণ প্রস্থ নেবে */
+}
+
+.nav-branding .nav-logo-text {
+    font-size: 1.5rem; /* স্কুলের নামের ফন্ট সাইজ */
+    font-weight: 700;
+    color: var(--soft-white);
+    text-decoration: none;
+}
+
+.nav-branding .nav-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--soft-white);
+}
+
+.nav-branding .school-logo-img {
+    height: 40px; /* লোগোর উচ্চতা, প্রয়োজন অনুযায়ী পরিবর্তন করুন */
+    width: auto;
+    margin-right: 10px;
+}
+.nav-branding .nav-logo-text-with-image {
+    font-size: 1.3rem; /* লোগোর সাথে নামের ফন্ট সাইজ */
+    font-weight: 600;
+}
+
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px; /* মেনু আইটেমগুলোর মধ্যে ফাঁকা জায়গা */
+}
+
+.nav-item {
+    position: relative; /* Active লিঙ্কের আন্ডারলাইনের জন্য */
+}
+
+.nav-link {
+    color: var(--soft-white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 0; /* উপরে-নিচে প্যাডিং লিঙ্কের ক্লিক এরিয়া বাড়ানোর জন্য */
+    transition: color var(--transition-speed) ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--golden-yellow); /* হোভার এবং অ্যাক্টিভ লিঙ্কের রঙ */
+}
+
+/* অ্যাক্টিভ লিঙ্কের নিচে হলুদ আন্ডারলাইন */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* টেক্সটের নিচে আন্ডারলাইনের পজিশন */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--golden-yellow);
+    border-radius: 1px;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none; /* ডিফল্টভাবে ডেস্কটপে লুকানো থাকবে */
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--soft-white);
+    transition: all 0.3s ease-in-out;
+    border-radius: 1px;
+}
+
+/* Responsive Styles for Navbar */
+@media (max-width: 992px) { /* ট্যাবলেট এবং ছোট ডিভাইসের জন্য */
+    .nav-menu {
+        gap: 20px;
+    }
+    .nav-link {
+        font-size: 0.95rem;
+    }
+    .nav-branding .nav-logo-text {
+        font-size: 1.3rem;
+    }
+    .nav-branding .nav-logo-text-with-image {
+        font-size: 1.2rem;
+    }
+    .nav-branding .school-logo-img {
+        height: 35px;
+    }
+}
+
+
+@media (max-width: 768px) { /* মোবাইল ডিভাইসের জন্য */
+    .hamburger {
+        display: block; /* হ্যামবার্গার আইকন দেখানো হবে */
+        z-index: 100; /* মেনুর উপরে থাকবে */
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0; /* মাঝখানের বার অদৃশ্য হবে */
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg); /* উপরের বার ক্রস হবে */
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg); /* নিচের বার ক্রস হবে */
+    }
+
+    .nav-menu {
+        position: fixed; /* ফিক্সড পজিশন */
+        left: -100%; /* প্রাথমিকভাবে পর্দার বাইরে */
+        top: var(--nav-height); /* Navbar এর ঠিক নিচে থেকে শুরু */
+        flex-direction: column; /* আইটেমগুলো নিচে নিচে আসবে */
+        background-color: var(--deep-blue);
+        width: 100%;
+        height: calc(100vh - var(--nav-height)); /* বাকি পুরো স্ক্রিন জুড়ে */
+        text-align: center;
+        transition: left 0.4s ease-in-out; /* মসৃণ স্লাইড ইফেক্ট */
+        padding-top: 30px;
+        gap: 0; /* ফ্লেক্স গ্যাপ ০ করে, প্রতিটি আইটেমের প্যাডিং দিয়ে নিয়ন্ত্রণ করা হবে */
+        overflow-y: auto; /* যদি মেনু আইটেম বেশি হয়, স্ক্রল করা যাবে */
+    }
+
+    .nav-menu.nav-active {
+        left: 0; /* মেনু দেখানোর জন্য */
+    }
+
+    .nav-item {
+        width: 100%; /* প্রতিটি আইটেম সম্পূর্ণ প্রস্থ নেবে */
+        margin: 0;
+    }
+
+    .nav-link {
+        display: block; /* সম্পূর্ণ প্রস্থ নেওয়ার জন্য */
+        padding: 18px 20px; /* মোবাইল মেনুতে প্যাডিং বাড়ানো হলো */
+        font-size: 1.1rem;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* আইটেমগুলোর মধ্যে বিভাজক */
+    }
+    .nav-item:last-child .nav-link {
+        border-bottom: none; /* শেষ আইটেমের নিচে বর্ডার থাকবে না */
+    }
+
+    /* মোবাইল মেনুতে অ্যাক্টিভ লিঙ্কের আন্ডারলাইন বাদ দেওয়া যেতে পারে, অথবা ভিন্ন স্টাইল করা যেতে পারে */
+    .nav-link.active::after {
+        display: none; /* মোবাইলে আন্ডারলাইন বাদ দেওয়া হলো, শুধু টেক্সট কালার পরিবর্তন হবে */
+    }
+}
+
+
+/* === HERO SECTION STYLES === */
+/* === HERO === */
+.hero-section {
+    position: relative; /* For absolute positioning of children */
+    width: 100%;
+    height: calc(100vh - var(--nav-height)); /* Full viewport height minus navbar height */
+    min-height: 500px; /* Minimum height for smaller screens or when navbar is tall */
+    overflow: hidden; /* Hide anything that spills out */
+    display: flex; /* To center content vertically and horizontally */
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center align text within the content box */
+    /* main এর padding-top এর কারণে margin-top এখানে আর প্রয়োজন নেই */
+}
+
+.hero-slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Behind overlay and content */
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    visibility: hidden; /* Hide inactive slides completely */
+    transition: opacity 1.5s ease-in-out, visibility 0s 1.5s; /* Fade transition, visibility changes after opacity */
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1.5s ease-in-out, visibility 0s 0s; /* Visibility changes immediately when active */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 61, 98, 0.55); /* var(--deep-blue) with opacity */
+    z-index: 2; /* Above slider, below content */
+}
+
+.hero-content-wrapper {
+    position: relative; /* To be above the overlay */
+    z-index: 3;
+    padding: 20px var(--gutter-width); /* Add some padding for smaller screens */
+}
+
+.hero-content-box {
+    background-color: rgba(10, 20, 30, 0.75); /* Darker semi-transparent box, slightly more opaque */
+    padding: 30px 40px;
+    border-radius: 10px;
+    display: inline-block; /* Fit content width */
+    max-width: 90%; /* Responsive max width */
+    box-shadow: var(--box-shadow-medium);
+}
+
+.hero-content-box h1 {
+    color: var(--soft-white);
+    font-size: 2.8rem; /* Responsive font size, adjust as needed */
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.hero-content-box p {
+    color: #e0e0e0; /* Slightly off-white for subtext */
+    font-size: 1.2rem; /* Responsive font size */
+    margin-bottom: 0; /* Remove bottom margin if no button after it */
+    line-height: 1.6;
+    max-width: 600px; /* Limit subtext width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-dots-container {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4; /* Above content box to ensure clickable */
+    display: flex;
+    gap: 10px; /* Space between dots */
+}
+
+.hero-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4); /* Inactive dot color, slightly less opaque */
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+.hero-dot:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+}
+
+.hero-dot.active {
+    background-color: var(--golden-yellow); /* Active dot color */
+    transform: scale(1.2);
+}
+
+/* Responsive adjustments for Hero Section */
+@media (max-width: 992px) {
+    .hero-content-box h1 {
+        font-size: 2.4rem;
+    }
+    .hero-content-box p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto; /* Allow height to adjust to content on smaller screens if needed */
+        min-height: calc(100vh - var(--nav-height)); /* Still try to fill screen height */
+        padding-top: 40px; /* Add some space if navbar is fixed and content is pushed */
+        padding-bottom: 80px; /* Space for dots if content is long */
+    }
+    .hero-content-box {
+        padding: 25px 30px;
+    }
+    .hero-content-box h1 {
+        font-size: 2rem;
+    }
+    .hero-content-box p {
+        font-size: 1rem;
+    }
+    .hero-dots-container {
+        bottom: 20px;
+    }
+    .hero-dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content-box {
+        padding: 20px;
+        max-width: 95%;
+    }
+    .hero-content-box h1 {
+        font-size: 1.7rem;
+    }
+    .hero-content-box p {
+        font-size: 0.9rem;
+    }
+    .hero-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* === ABOUT US SECTION STYLES === */
+/* === ABOUT US === */
+
+.about-section {
+    background-color: var(--soft-white); /* ছবির ব্যাকগ্রাউন্ড সাদা, তাই সেকশনের ব্যাকগ্রাউন্ডও সাদা রাখা হলো */
+}
+
+.section-title { /* এই স্টাইলটি আগের সেটআপ থেকে আসতে পারে, তবে এখানে আরও কাস্টমাইজ করা যেতে পারে */
+    text-align: center;
+    font-size: 2.5rem; /* শিরোনামের ফন্ট সাইজ */
+    color: var(--deep-blue);
+    margin-bottom: 40px; /* শিরোনামের নিচে ফাঁকা জায়গা */
+    position: relative;
+    padding-bottom: 15px; /* আন্ডারলাইনের জন্য জায়গা */
+}
+
+.section-title::after { /* শিরোনামের নিচে হলুদ আন্ডারলাইন */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px; /* আন্ডারলাইনের প্রস্থ */
+    height: 4px; /* আন্ডারলাইনের উচ্চতা */
+    background-color: var(--golden-yellow);
+    border-radius: 2px;
+}
+
+.about-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* রেসপন্সিভ গ্রিড */
+    gap: 40px; /* টেক্সট এবং ছবির মধ্যে ফাঁকা জায়গা */
+    align-items: center; /* কন্টেন্টগুলো উল্লম্বভাবে মাঝখানে থাকবে */
+}
+
+.about-text-content p {
+    font-size: 1.05rem; /* অনুচ্ছেদের ফন্ট সাইজ */
+    line-height: 1.8;
+    color: var(--medium-gray); /* টেক্সটের রঙ */
+    margin-bottom: 20px; /* প্রতিটি অনুচ্ছেদের নিচে ফাঁকা জায়গা */
+}
+
+.about-text-content p:last-child {
+    margin-bottom: 0; /* শেষ অনুচ্ছেদের নিচে অতিরিক্ত ফাঁকা জায়গা বাদ দেওয়া */
+}
+
+.about-image-content img {
+    width: 100%; /* ছবিটি তার কন্টেইনারের সম্পূর্ণ প্রস্থ নেবে */
+    max-width: 450px; /* ছবির সর্বোচ্চ প্রস্থ, যেন বেশি বড় না হয়ে যায় */
+    height: auto;
+    border-radius: 8px; /* ছবির কোণাগুলো একটু গোলাকার হবে */
+    box-shadow: var(--box-shadow-light); /* হালকা শ্যাডো */
+    margin-left: auto; /* বড় স্ক্রিনে ছবিকে ডানদিকে রাখার চেষ্টা (যদি কলামের জায়গা বেশি থাকে) */
+    margin-right: auto; /* ছোট স্ক্রিনে মাঝখানে আসবে */
+}
+
+/* ছবির নিচে ক্যাপশনের জন্য ঐচ্ছিক স্টাইল */
+.about-image-content .image-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 10px;
+}
+
+.about-read-more-btn-container {
+    margin-top: 25px; /* টেক্সট এবং বাটনের মধ্যে ফাঁকা জায়গা */
+}
+
+/* Responsive adjustments for About Us Section (এখানে একটি আপডেট) */
+@media (max-width: 768px) {
+    /* ... (আগের .about-text-content p এর পর) ... */
+    .about-read-more-btn-container {
+        text-align: center; /* ছোট স্ক্রিনে বাটন মাঝখানে দেখানোর জন্য */
+    }
+}
+
+/* Responsive adjustments for About Us Section */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+    .about-content-grid {
+        gap: 30px; /* ছোট স্ক্রিনে গ্যাপ কমানো */
+    }
+     .about-image-content {
+        order: -1; /* ছোট স্ক্রিনে ছবিকে টেক্সটের উপরে দেখানো (ঐচ্ছিক) */
+        margin-bottom: 30px; /* ছবির নিচে ফাঁকা জায়গা */
+    }
+    .about-image-content img {
+        max-width: 100%; /* ছোট স্ক্রিনে ছবি সম্পূর্ণ প্রস্থ নিতে পারে */
+    }
+    .about-text-content p {
+        font-size: 1rem;
+    }
+}
+
+
+/* === CLASSES SECTION STYLES (শ্রেণিসমূহ) === */
+/* === CLASSES === */
+.classes-section {
+    background-color: var(--soft-white); /* ছবির ব্যাকগ্রাউন্ড সাদা */
+}
+
+/* Section title style is already defined globally or in about-us section,
+   so it will be reused. If specific styling needed for this title,
+   target it via .classes-section .section-title */
+
+.classes-grid {
+    display: grid;
+    /* responsive grid: min 200px width for card, max 1fr (take available space) */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px; /* কার্ডগুলোর মধ্যে ফাঁকা জায়গা */
+    margin-top: 20px; /* শিরোনামের পর একটু ফাঁকা জায়গা */
+}
+
+.class-card {
+    background-color: var(--soft-white); /* কার্ডের ব্যাকগ্রাউন্ড */
+    padding: 25px 20px;
+    border-radius: 8px; /* কার্ডের কোণাগুলো গোলাকার */
+    text-align: center; /* কার্ডের ভেতরের লেখা মাঝখানে */
+    box-shadow: var(--box-shadow-light); /* হালকা শ্যাডো */
+    border-top-width: 4px; /* উপরের বর্ডারের পুরুত্ব */
+    border-top-style: solid;
+    /* বর্ডারের রঙ প্রতিটি কার্ডের জন্য ভিন্ন হবে (নিচে দেখুন) */
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.class-card:hover {
+    transform: translateY(-6px); /* হোভারে কার্ডটি একটু উপরে উঠবে */
+    box-shadow: var(--box-shadow-medium); /* হোভারে শ্যাডো একটু বাড়বে */
+}
+
+/* প্রতিটি কার্ডের জন্য আলাদা টপ বর্ডার কালার */
+/* আপনি :root এ এই কালারগুলো ভেরিয়েবল হিসেবেও রাখতে পারেন */
+.class-card:nth-child(1) { border-top-color: #3498db; } /* নীল (var(--info-blue) ও ব্যবহার করা যায়) */
+.class-card:nth-child(2) { border-top-color: #e74c3c; } /* লাল (var(--danger-red) ও ব্যবহার করা যায়) */
+.class-card:nth-child(3) { border-top-color: #2ecc71; } /* সবুজ (var(--success-green) ও ব্যবহার করা যায়) */
+.class-card:nth-child(4) { border-top-color: #f39c12; } /* কমলা (var(--warning-orange) এর কাছাকাছি) */
+.class-card:nth-child(5) { border-top-color: #9b59b6; } /* পার্পল */
+.class-card:nth-child(6) { border-top-color: #1abc9c; } /* টিল (যদি ৬ষ্ঠ কার্ড থাকে) */
+/* প্রয়োজনে আরও :nth-child সিলেক্টর যোগ করুন */
+
+
+.class-card .class-name {
+    font-size: 1.4rem;
+    color: var(--deep-blue); /* শ্রেণির নামের রঙ */
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.class-card .class-description {
+    font-size: 0.95rem;
+    color: var(--medium-gray); /* বিবরণের রঙ */
+    line-height: 1.5;
+}
+
+/* Responsive adjustments for Classes Section */
+@media (max-width: 768px) {
+    .classes-grid {
+        /* On smaller screens, allow 2 columns if space permits, else 1 */
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+    .class-card .class-name {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .classes-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+    .class-card .class-name {
+        font-size: 1.2rem;
+    }
+     .class-card .class-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* === NOTICE BOARD SECTION STYLES (নোটিশ বোর্ড) === */
+.notice-section {
+    background-color: var(--light-gray); /* ছবির সেকশনের ব্যাকগ্রাউন্ড হালকা ধূসর */
+}
+
+/* Section title style is already defined globally. */
+
+.notice-items-container {
+    max-width: 800px; /* নোটিশগুলোর সর্বোচ্চ প্রস্থ */
+    margin: 0 auto; /* মাঝখানে আনার জন্য */
+    margin-top: 20px; /* শিরোনামের পর একটু ফাঁকা জায়গা */
+}
+
+.notice-item {
+    background-color: var(--soft-white); /* সাধারণ নোটিশের ব্যাকগ্রাউন্ড */
+    padding: 20px 25px;
+    margin-bottom: 20px; /* প্রতিটি নোটিশের মধ্যে ফাঁকা জায়গা */
+    border-radius: 8px; /* কোণাগুলো গোলাকার */
+    box-shadow: var(--box-shadow-light);
+    border-left: 5px solid var(--deep-blue); /* বাম পাশে ডিপ ব্লু বর্ডার */
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.notice-item:hover {
+    transform: translateX(5px); /* হোভারে সামান্য ডানে সরবে */
+    box-shadow: var(--box-shadow-medium);
+}
+
+.notice-item.notice-highlight { /* হাইলাইটেড নোটিশের জন্য স্টাইল */
+    background-color: #fffbeb; /* হালকা হলুদ ব্যাকগ্রাউন্ড (var(--golden-yellow) এর একটি হালকা শেড) */
+    border-left-color: var(--golden-yellow); /* বাম পাশের বর্ডার গোল্ডেন ইয়োলো */
+}
+
+.notice-item .notice-date {
+    font-size: 0.9rem;
+    color: var(--golden-yellow); /* তারিখের রঙ গোল্ডেন ইয়োলো */
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block; /* সম্পূর্ণ লাইন জুড়ে থাকবে */
+}
+
+.notice-item.notice-highlight .notice-date {
+    /* হাইলাইটেড নোটিশে তারিখের রঙ একই থাকতে পারে অথবা পরিবর্তন করা যেতে পারে */
+     color: #d48806; /* একটু গাঢ় হলুদ */
+}
+
+.notice-item .notice-text {
+    font-size: 1rem;
+    color: var(--dark-gray); /* নোটিশের টেক্সটের রঙ */
+    line-height: 1.6;
+    margin: 0; /* <p> ট্যাগের ডিফল্ট মার্জিন বাদ দেওয়া */
+}
+
+.notice-all-btn-container {
+    margin-top: 40px; /* নোটিশগুলোর নিচে বাটনের জন্য ফাঁকা জায়গা */
+}
+
+/* Responsive adjustments for Notice Board Section */
+@media (max-width: 768px) {
+    .notice-item {
+        padding: 15px 20px;
+    }
+    .notice-item .notice-text {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* === GALLERY SECTION STYLES (গ্যালারি) === */
+.gallery-section {
+    background-color: var(--soft-white); /* ছবির ব্যাকগ্রাউন্ড সাদা */
+}
+
+/* Section title style is already defined globally. */
+
+.gallery-slider-wrapper {
+    position: relative; /* নেভিগেশন বাটনগুলোর পজিশনিং এর জন্য */
+    max-width: 900px; /* স্লাইডারের সর্বোচ্চ প্রস্থ */
+    margin: 20px auto 0; /* শিরোনামের পর এবং মাঝখানে আনার জন্য */
+    overflow: hidden; /* স্লাইডগুলো বাইরে যেন না যায় */
+    border-radius: 8px; /* কন্টেইনারের কোণা গোলাকার */
+    box-shadow: var(--box-shadow-medium);
+}
+
+.gallery-slides-container {
+    display: flex; /* স্লাইডগুলোকে পাশাপাশি রাখার জন্য */
+    /* JavaScript এই কন্টেইনারের transform: translateX() পরিবর্তন করে স্লাইড করাবে */
+    transition: transform 0.5s ease-in-out; /* মসৃণ স্লাইড ট্রানজিশন */
+}
+
+.gallery-slide-item {
+    min-width: 100%; /* প্রতিটি স্লাইড কন্টেইনারের সম্পূর্ণ প্রস্থ নেবে */
+    position: relative; /* ক্যাপশনের পজিশনিং এর জন্য */
+    /* প্রাথমিকভাবে JavaScript দ্বারা opacity এবং visibility নিয়ন্ত্রণ করা যেতে পারে,
+       তবে translateX দিয়ে স্লাইড করলে এটি কম জটিল হবে */
+}
+
+.gallery-slide-item img {
+    width: 100%;
+    height: auto; /* ছবির অনুপাত ঠিক রাখবে */
+    max-height: 550px; /* ছবির সর্বোচ্চ উচ্চতা (প্রয়োজন অনুযায়ী পরিবর্তন করুন) */
+    object-fit: cover; /* ছবি যেন কন্টেইনারের সাথে ফিট হয় এবং ক্রপ হতে পারে */
+    display: block; /* ছবির নিচে অতিরিক্ত ফাঁকা জায়গা বাদ দেওয়া */
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 20, 30, 0.75); /* var(--deep-blue) এর একটি গাঢ় শেড, স্বচ্ছ */
+    color: var(--soft-white);
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.gallery-slide-item:hover .gallery-caption {
+    background-color: rgba(var(--golden-yellow-rgb, 249, 168, 37), 0.85); /* গোল্ডেন ইয়োলো হোভারে */
+    color: var(--deep-blue);
+}
+/* For golden yellow hover, define its RGB in :root if not already */
+/* :root { --golden-yellow-rgb: 249, 168, 37; } */
+/* Add to :root in style.css: */
+/* --golden-yellow-rgb: 249, 168, 37; */
+
+
+.gallery-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(10, 20, 30, 0.6); /* নেভিগেশন বাটনের ব্যাকগ্রাউন্ড */
+    color: var(--soft-white);
+    border: none;
+    padding: 0; /* আইকনের সাইজ অনুযায়ী প্যাডিং হবে */
+    width: 40px;
+    height: 40px;
+    line-height: 40px; /* আইকনকে মাঝখানে আনার জন্য */
+    font-size: 1.2rem; /* আইকনের সাইজ */
+    cursor: pointer;
+    z-index: 10; /* স্লাইডের উপরে থাকবে */
+    border-radius: 50%; /* গোলাকার বাটন */
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-nav-btn:hover {
+    background-color: var(--golden-yellow);
+    color: var(--deep-blue);
+}
+
+.gallery-nav-btn.prev-btn {
+    left: 15px;
+}
+
+.gallery-nav-btn.next-btn {
+    right: 15px;
+}
+
+/* Responsive adjustments for Gallery Section */
+@media (max-width: 768px) {
+    .gallery-slide-item img {
+        max-height: 400px;
+    }
+    .gallery-nav-btn {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 1rem;
+    }
+    .gallery-caption {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-slide-item img {
+        max-height: 300px;
+    }
+}
+
+/* === HEADMASTER'S MESSAGE SECTION STYLES === */
+.headmaster-section {
+    background-color: var(--light-gray); /* ছবির সেকশনের ব্যাকগ্রাউন্ড হালকা ধূসর */
+}
+
+/* Section title style is already defined globally. */
+
+.headmaster-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* ছবির জন্য ১ ভাগ, বার্তার জন্য ২ ভাগ */
+    gap: 40px; /* ছবি এবং বার্তার মধ্যে ফাঁকা জায়গা */
+    align-items: center; /* কন্টেন্ট উল্লম্বভাবে মাঝখানে থাকবে */
+    max-width: 960px; /* সেকশনের কন্টেন্টের সর্বোচ্চ প্রস্থ */
+    margin: 20px auto 0; /* শিরোনামের পর এবং মাঝখানে আনার জন্য */
+}
+
+.headmaster-photo-container {
+    display: flex;
+    justify-content: center; /* ছবিকে কন্টেইনারের মাঝখানে রাখার জন্য */
+    align-items: center;
+}
+
+.headmaster-photo {
+    width: 220px; /* ছবির প্রস্থ */
+    height: 220px; /* ছবির উচ্চতা */
+    object-fit: cover; /* ছবি যেন কন্টেইনারে সুন্দরভাবে ফিট হয় */
+    border-radius: 50%; /* ছবিকে গোলাকার করার জন্য */
+    border: 6px solid var(--soft-white); /* ছবির চারপাশে সাদা বর্ডার */
+    box-shadow: 0 0 0 8px var(--golden-yellow), var(--box-shadow-medium); /* গোল্ডেন ইয়োলো আউটলাইন এবং শ্যাডো */
+    /* ডিম্বাকৃতি মাস্কের জন্য clip-path ব্যবহার করা যেতে পারে, তবে border-radius: 50% সহজ এবং কার্যকর */
+    /* filter: grayscale(30%); ঐচ্ছিক: ছবিকে একটু ডি-স্যাচুরেটেড করতে */
+}
+
+.headmaster-message-content {
+    text-align: left; /* বার্তার টেক্সট বাম দিকে অ্যালাইন হবে */
+}
+
+.message-quote p {
+    font-size: 1.05rem;
+    color: var(--medium-gray);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-style: italic; /* বার্তার টেক্সট ইটালিক হবে */
+    position: relative; /* "কোটেশন মার্ক" এর জন্য */
+    padding-left: 30px; /* কোটেশন মার্কের জন্য জায়গা */
+}
+
+.message-quote p::before { /* প্রতিটি অনুচ্ছেদের শুরুতে "কোটেশন মার্ক" */
+    content: '\201C'; /* Left double quotation mark */
+    font-family: 'Times New Roman', Times, serif; /* সুন্দর কোটেশন মার্কের জন্য */
+    font-size: 2.5em;
+    color: var(--golden-yellow);
+    position: absolute;
+    left: 0;
+    top: -5px; /* কোটেশন মার্কের পজিশন অ্যাডজাস্ট করুন */
+}
+
+.message-quote p:last-child {
+    margin-bottom: 0;
+}
+
+.headmaster-info {
+    margin-top: 25px;
+    text-align: right; /* নাম, পদবি ডানদিকে অ্যালাইন হবে */
+}
+
+.headmaster-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--deep-blue);
+    margin-bottom: 2px;
+}
+
+.headmaster-designation,
+.school-name-ref {
+    font-size: 0.95rem;
+    color: var(--medium-gray);
+    line-height: 1.4;
+}
+.school-name-ref {
+    font-style: italic;
+}
+
+
+/* Responsive adjustments for Headmaster's Message Section */
+@media (max-width: 768px) {
+    .headmaster-content-wrapper {
+        grid-template-columns: 1fr; /* এক কলামে পরিবর্তিত হবে */
+        gap: 30px;
+        text-align: center; /* সব কন্টেন্ট মাঝখানে আসবে */
+    }
+    .headmaster-photo-container {
+        margin-bottom: 10px; /* ছবির নিচে একটু ফাঁকা জায়গা */
+    }
+    .headmaster-photo {
+        width: 180px;
+        height: 180px;
+    }
+    .headmaster-message-content {
+        text-align: center; /* বার্তার টেক্সটও মাঝখানে */
+    }
+    .message-quote p {
+        padding-left: 0; /* ছোট স্ক্রিনে কোটেশন মার্কের জন্য প্যাডিং বাদ */
+        text-align: justify; /* বার্তার টেক্সট জাস্টিফাই করা যেতে পারে */
+    }
+    .message-quote p::before {
+        /* ছোট স্ক্রিনে কোটেশন মার্ক বাদ দিতে চাইলে: display: none; */
+        /* অথবা পজিশন অ্যাডজাস্ট করতে পারেন */
+        display: none; /* আপাতত বাদ দেওয়া হলো */
+    }
+    .headmaster-info {
+        text-align: center; /* নাম, পদবি মাঝখানে */
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .headmaster-photo {
+        width: 150px;
+        height: 150px;
+        border-width: 4px;
+        box-shadow: 0 0 0 6px var(--golden-yellow), var(--box-shadow-light);
+    }
+    .message-quote p {
+        font-size: 1rem;
+    }
+    .headmaster-name {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* === ADMISSION INFO SECTION STYLES === */
+.admission-section {
+    background-color: var(--soft-white); /* ছবির ব্যাকগ্রাউন্ড সাদা */
+}
+
+/* Section title style is already defined globally. */
+
+.admission-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* রেসপন্সিভ গ্রিড */
+    gap: 40px; /* কলাম এবং ব্লকের মধ্যে ফাঁকা জায়গা */
+    margin-top: 20px; /* শিরোনামের পর একটু ফাঁকা জায়গা */
+}
+
+.admission-block {
+    margin-bottom: 30px; /* প্রতিটি ইনফো ব্লকের নিচে ফাঁকা জায়গা */
+}
+.admission-block:last-child {
+    margin-bottom: 0;
+}
+
+.admission-subtitle {
+    font-size: 1.5rem;
+    color: var(--deep-blue);
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--golden-yellow); /* উপ-শিরোনামের নিচে হলুদ আন্ডারলাইন */
+    display: inline-block; /* যেন আন্ডারলাইন টেক্সটের প্রস্থ অনুযায়ী হয় */
+}
+
+.admission-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.admission-list li {
+    font-size: 1rem;
+    color: var(--medium-gray);
+    line-height: 1.7;
+    margin-bottom: 12px;
+    display: flex; /* আইকন এবং টেক্সটকে পাশাপাশি ও অ্যালাইন করার জন্য */
+    align-items: flex-start; /* আইকন এবং টেক্সট উপরে অ্যালাইন হবে */
+}
+
+.admission-list li i.fas.fa-check-circle {
+    color: var(--golden-yellow); /* টিক চিহ্নের রঙ */
+    margin-right: 10px; /* আইকন এবং টেক্সটের মধ্যে ফাঁকা জায়গা */
+    font-size: 1.1em; /* আইকনের সাইজ সামান্য বড় */
+    margin-top: 3px; /* টেক্সটের সাথে উল্লম্বভাবে অ্যালাইন করার জন্য সামান্য নিচে নামানো */
+}
+
+.admission-fees-table {
+    width: 100%;
+    border-collapse: collapse; /* টেবিলের বর্ডারগুলো একসাথে দেখানোর জন্য */
+    margin-top: 5px; /* উপ-শিরোনামের নিচে সামান্য ফাঁকা জায়গা */
+    box-shadow: var(--box-shadow-light);
+    border-radius: 6px; /* টেবিলের কোণা গোলাকার করার জন্য (overflow:hidden লাগবে) */
+    overflow: hidden; /* border-radius কাজ করানোর জন্য */
+}
+
+.admission-fees-table th,
+.admission-fees-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0; /* প্রতিটি সারির নিচে হালকা বর্ডার */
+    font-size: 1rem;
+}
+
+.admission-fees-table thead th {
+    background-color: var(--deep-blue); /* টেবিল হেডার ব্যাকগ্রাউন্ড */
+    color: var(--soft-white); /* টেবিল হেডার টেক্সট রঙ */
+    font-weight: 600;
+}
+
+.admission-fees-table tbody tr:nth-child(even) {
+    background-color: var(--light-gray); /* জোড় সারির জন্য হালকা ব্যাকগ্রাউন্ড */
+}
+
+.admission-fees-table tbody tr:hover {
+    background-color: #e9f5ff; /* হোভারে সারির ব্যাকগ্রাউন্ড পরিবর্তন (ঐচ্ছিক) */
+}
+
+.admission-fees-table td:last-child {
+    text-align: right; /* ফি ডানদিকে অ্যালাইন হবে */
+    font-weight: 500;
+    color: var(--deep-blue);
+}
+
+/* Responsive adjustments for Admission Info Section */
+@media (max-width: 768px) {
+    .admission-content-grid {
+        grid-template-columns: 1fr; /* ছোট স্ক্রিনে এক কলাম */
+        gap: 20px;
+    }
+    .admission-subtitle {
+        font-size: 1.3rem;
+    }
+    .admission-list li,
+    .admission-fees-table th,
+    .admission-fees-table td {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* === CONTACT FORM SECTION STYLES === */
+.contact-form-section {
+    background-color: var(--light-gray); /* সেকশনের ব্যাকগ্রাউন্ড হালকা ধূসর */
+}
+
+/* Section title style is already defined globally. */
+
+.contact-form-wrapper {
+    max-width: 800px; /* ফর্মের সর্বোচ্চ প্রস্থ */
+    margin: 20px auto 0; /* শিরোনামের পর এবং মাঝখানে আনার জন্য */
+    background-color: var(--soft-white);
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-medium);
+}
+
+.contact-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* রেসপন্সিভ গ্রিড কলাম */
+    gap: 25px; /* ফিল্ডগুলোর মধ্যে ফাঁকা জায়গা */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group:last-of-type { /* গ্রিডের ভেতরের শেষ ফর্ম গ্রুপের মার্জিন */
+     margin-bottom: 0;
+}
+.form-group.form-group-fullwidth { /* টেক্সটএরিয়া এবং বাটনের জন্য */
+    grid-column: 1 / -1; /* গ্রিডের সম্পূর্ণ প্রস্থ নেবে */
+    margin-bottom: 20px;
+}
+.form-group.form-group-fullwidth:last-of-type {
+    margin-bottom: 0;
+}
+
+
+.form-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--deep-blue);
+    font-size: 0.95rem;
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon i.fas {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--medium-gray);
+    font-size: 0.9em;
+    pointer-events: none; /* আইকনের উপর যেন ক্লিক না করা যায় */
+}
+.input-with-icon textarea ~ i.fas { /* টেক্সটএরিয়ার আইকন উপরে থাকবে */
+    top: 18px;
+    transform: translateY(0);
+}
+
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px 12px 40px; /* বামে আইকনের জন্য প্যাডিং */
+    font-family: var(--body-font);
+    font-size: 1rem;
+    color: var(--dark-gray);
+    background-color: var(--soft-white);
+    border: 1px solid #ced4da; /* ইনপুট ফিল্ডের বর্ডার */
+    border-radius: 5px;
+    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.form-control:focus {
+    border-color: var(--golden-yellow);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(var(--golden-yellow-rgb, 249, 168, 37), 0.25);
+}
+.form-control::placeholder {
+    color: #a0a0a0;
+    opacity: 1;
+}
+
+textarea.form-control {
+    resize: vertical; /* ব্যবহারকারী যেন উল্লম্বভাবে রিসাইজ করতে পারে */
+    min-height: 120px;
+    padding-top: 12px; /* টেক্সটএরিয়ার উপরের প্যাডিং */
+}
+
+.btn-submit-contact {
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    width: auto; /* বাটনের প্রস্থ কন্টেন্ট অনুযায়ী */
+    min-width: 180px;
+}
+
+.form-status { /* Form submission status message styling */
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+.form-status.success {
+    background-color: #d4edda; /* হালকা সবুজ */
+    color: #155724; /* গাঢ় সবুজ */
+    border: 1px solid #c3e6cb;
+}
+.form-status.error {
+    background-color: #f8d7da; /* হালকা লাল */
+    color: #721c24; /* গাঢ় লাল */
+    border: 1px solid #f5c6cb;
+}
+
+
+/* Responsive adjustments for Contact Form Section */
+@media (max-width: 768px) {
+    .contact-form-wrapper {
+        padding: 25px;
+    }
+}
+@media (max-width: 480px) {
+    .contact-form-wrapper {
+        padding: 20px 15px;
+    }
+    .form-control {
+        font-size: 0.95rem;
+    }
+}
+
+
+
+/* === FOOTER SECTION STYLES === */
+.footer {
+    background-color: var(--deep-blue); /* ফুটারের ডার্ক ব্যাকগ্রাউন্ড */
+    color: #c0c7d2; /* ফুটারের সাধারণ টেক্সটের রঙ (হালকা নীল-ধূসর) */
+    padding-top: 50px; /* ফুটারের উপরে ফাঁকা জায়গা */
+    font-size: 0.95rem;
+}
+
+.footer-main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* রেসপন্সিভ কলাম */
+    gap: 30px; /* কলামগুলোর মধ্যে ফাঁকা জায়গা */
+    padding-bottom: 40px; /* কলামগুলোর নিচে ফাঁকা জায়গা */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* কলাম এবং বটম বারের মধ্যে বিভাজক */
+}
+
+.footer-column h3,
+.footer-column h4 {
+    color: var(--golden-yellow); /* ফুটারের কলাম শিরোনামের রঙ */
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.footer-school-name {
+    font-size: 1.6rem;
+}
+.footer-tagline {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #a8b2c0;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 15px; /* আইকনগুলোর মধ্যে ফাঁকা জায়গা */
+}
+
+.footer-social-icons a {
+    color: #c0c7d2; /* সোশ্যাল আইকনের ডিফল্ট রঙ */
+    font-size: 1.3rem; /* আইকনের সাইজ */
+    display: inline-flex; /* আইকনকে সঠিকভাবে অ্যালাইন করার জন্য */
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: color var(--transition-speed) ease, background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.footer-social-icons a:hover {
+    color: var(--deep-blue); /* হোভারে আইকনের রঙ */
+    background-color: var(--golden-yellow); /* হোভারে ব্যাকগ্রাউন্ড রঙ */
+    border-color: var(--golden-yellow);
+}
+
+.footer-quick-links ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-quick-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-quick-links ul li a {
+    color: #c0c7d2; /* লিঙ্কের রঙ */
+    text-decoration: none;
+    transition: color var(--transition-speed) ease, padding-left var(--transition-speed) ease;
+}
+
+.footer-quick-links ul li a:hover {
+    color: var(--golden-yellow); /* হোভারে লিঙ্কের রঙ */
+    padding-left: 5px; /* হোভারে লিঙ্ক একটু ডানে সরবে */
+}
+
+.footer-contact-info p {
+    margin-bottom: 12px;
+    line-height: 1.7;
+    display: flex; /* আইকন এবং টেক্সট অ্যালাইন করার জন্য */
+    align-items: flex-start;
+}
+
+.footer-contact-info p i.fas {
+    color: var(--golden-yellow); /* কন্টাক্ট আইকনের রঙ */
+    margin-right: 12px;
+    font-size: 1.1em;
+    width: 20px; /* আইকনের জন্য নির্দিষ্ট জায়গা */
+    text-align: center;
+    margin-top: 2px; /* টেক্সটের সাথে উল্লম্বভাবে অ্যালাইন করার জন্য */
+}
+
+.footer-bottom-bar {
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: #a8b2c0; /* হালকা টেক্সটের রঙ */
+    background-color: #083556; /* ফুটারের মূল ব্যাকগ্রাউন্ডের চেয়ে সামান্য ভিন্ন হতে পারে, অথবা একই রাখতে পারেন */
+    /* border-top: 1px solid rgba(255, 255, 255, 0.05); (যদি footer-main-content এর নিচে বর্ডার না থাকে) */
+}
+
+.footer-bottom-content {
+    display: flex; /* পাশাপাশি দেখানোর জন্য */
+    flex-wrap: wrap; /* ছোট স্ক্রিনে নিচে নিচে আসবে */
+    justify-content: space-between; /* দুই প্রান্তে ছড়ানোর জন্য */
+    align-items: center; /* উল্লম্বভাবে মাঝখানে */
+    text-align: center; /* ডিফল্ট টেক্সট অ্যালাইনমেন্ট */
+}
+
+.copyright-text,
+.designer-credit {
+    margin: 5px 10px; /* উপরে-নিচে এবং পাশাপাশি অল্প মার্জিন */
+}
+
+.designer-credit a {
+    color: var(--golden-yellow); /* ডিজাইনারের নামের লিঙ্কের রঙ */
+    font-weight: 500;
+    text-decoration: none;
+    transition: color var(--transition-speed) ease, text-decoration var(--transition-speed) ease;
+}
+
+.designer-credit a:hover {
+    color: var(--soft-white); /* হোভারে রঙ পরিবর্তন */
+    text-decoration: underline; /* হোভারে আন্ডারলাইন */
+}
+
+
+/* Responsive adjustments for Footer Section */
+@media (max-width: 768px) {
+    .footer-main-content {
+        grid-template-columns: 1fr; /* ছোট স্ক্রিনে এক কলাম */
+        text-align: center; /* সব কন্টেন্ট মাঝখানে */
+    }
+    .footer-social-icons {
+        justify-content: center; /* সোশ্যাল আইকন মাঝখানে */
+        margin-bottom: 20px;
+    }
+    .footer-contact-info p {
+        justify-content: center; /* কন্টাক্ট তথ্য মাঝখানে (যদি পুরো কলাম মাঝখানে হয়) */
+        /* অথবা টেক্সট বামে রাখতে চাইলে: justify-content: flex-start; */
+    }
+    .footer-bottom-content {
+        flex-direction: column; /* ছোট স্ক্রিনে নিচে নিচে আসবে */
+    }
+    .copyright-text {
+        margin-bottom: 8px; /* কপিরাইট এবং ক্রেডিটের মধ্যে ফাঁকা জায়গা */
+    }
+}
+
+/* === ABOUT.HTML PAGE SPECIFIC STYLES === */
+
+/* About Page Hero Section */
+.about-page-hero {
+    background-color: var(--deep-blue); /* Fallback color */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    text-align: center;
+    color: var(--soft-white);
+    position: relative; /* For overlay if needed */
+}
+.about-page-hero::before { /* Optional overlay */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 61, 98, 0.6); /* var(--deep-blue) with opacity */
+}
+.about-page-hero .container {
+    position: relative; /* To keep content above overlay */
+    z-index: 2;
+}
+
+.page-main-title { /* Already defined in previous about.html setup, ensure it's styled */
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+.breadcrumb { /* Already defined, ensure it's styled */
+    font-size: 0.95rem;
+    margin-bottom: 0; /* No extra margin if it's the last element in hero */
+}
+.breadcrumb a { color: var(--golden-yellow); }
+.breadcrumb .fa-angle-right { margin: 0 8px; font-size: 0.8em; }
+
+
+/* Detailed About Section Content */
+.about-detailed-section {
+    background-color: var(--soft-white);
+}
+
+.about-article .about-block {
+    margin-bottom: 50px; /* প্রতিটি ব্লকের মধ্যে ফাঁকা জায়গা */
+}
+.about-article .about-block:last-child {
+    margin-bottom: 0;
+}
+
+.about-subtitle {
+    font-size: 2rem;
+    color: var(--deep-blue);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--golden-yellow);
+    display: inline-block; /* যেন বর্ডার টেক্সটের সাথে থাকে */
+}
+.about-subtitle i.fas {
+    margin-right: 12px;
+    color: var(--golden-yellow); /* আইকনের রঙ */
+}
+
+.about-article p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--dark-gray);
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* Mission & Vision Grid */
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 15px;
+}
+.mission-vision-item {
+    background-color: var(--light-gray);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid var(--golden-yellow);
+}
+.mission-vision-item h4 {
+    font-size: 1.4rem;
+    color: var(--deep-blue);
+    margin-bottom: 10px;
+}
+.mission-vision-item h4 i.fas {
+    margin-right: 8px;
+    color: var(--golden-yellow);
+}
+.mission-vision-item p {
+    text-align: left; /* specific paragraphs in mission/vision */
+    font-size: 1rem;
+    color: var(--medium-gray);
+    margin-bottom: 0;
+}
+
+/* Custom List (for objectives) */
+ul.custom-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+ul.custom-list li {
+    font-size: 1.05rem;
+    color: var(--dark-gray);
+    margin-bottom: 12px;
+    padding-left: 30px; /* আইকনের জন্য জায়গা */
+    position: relative;
+}
+ul.custom-list li::before {
+    content: '\f058'; /* Font Awesome check-circle icon (solid) */
+    font-family: 'Font Awesome 5 Free'; /* or 'Font Awesome 6 Free' based on your version */
+    font-weight: 900; /* For solid icons */
+    color: var(--golden-yellow);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1.1em;
+}
+
+
+/* Headmaster's Message Detailed */
+.headmaster-message-detailed .message-content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    align-items: flex-start; /* Align items to the start */
+    gap: 30px; /* ছবির ও টেক্সটের মধ্যে গ্যাপ */
+    background-color: #f9f9f9; /* হালকা ব্যাকগ্রাউন্ড */
+    padding: 25px;
+    border-radius: 8px;
+}
+.headmaster-photo-detailed {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--soft-white);
+    box-shadow: 0 0 0 5px var(--golden-yellow), var(--box-shadow-light);
+    flex-shrink: 0; /* যেন ছবি ছোট না হয়ে যায় */
+}
+.headmaster-message-detailed .message-text {
+    flex-grow: 1; /* বাকি জায়গা টেক্সট নেবে */
+}
+.headmaster-message-detailed .message-text p {
+    font-style: italic;
+    color: var(--medium-gray);
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.headmaster-message-detailed .signature {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+.headmaster-message-detailed .signature p {
+    margin-bottom: 3px;
+    font-style: normal;
+    text-align: right;
+    color: var(--dark-gray);
+}
+.headmaster-message-detailed .signature p:first-child { /* Name */
+    font-weight: bold;
+    color: var(--deep-blue);
+}
+
+
+/* Infrastructure Grid */
+.infrastructure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+.infrastructure-item {
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--box-shadow-light);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+.infrastructure-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-medium);
+}
+.infrastructure-item img {
+    width: 100%;
+    height: 180px; /* নির্দিষ্ট উচ্চতা */
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+.infrastructure-item h4 {
+    font-size: 1.3rem;
+    color: var(--deep-blue);
+    margin-bottom: 10px;
+}
+.infrastructure-item h4 i.fas {
+    margin-right: 8px;
+    color: var(--golden-yellow);
+}
+.infrastructure-item p {
+    font-size: 0.95rem;
+    color: var(--medium-gray);
+    margin-bottom: 0;
+    text-align: center;
+}
+
+
+/* Responsive adjustments for About Page Content */
+@media (max-width: 768px) {
+    .about-subtitle {
+        font-size: 1.8rem;
+    }
+    .headmaster-message-detailed .message-content-wrapper {
+        flex-direction: column; /* Stack image and text */
+        align-items: center; /* Center items */
+        text-align: center;
+    }
+    .headmaster-photo-detailed {
+        margin-bottom: 20px; /* Add space below photo */
+    }
+    .headmaster-message-detailed .message-text p,
+    .headmaster-message-detailed .signature p {
+        text-align: center;
+    }
+    .infrastructure-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* === TEACHERS.HTML PAGE SPECIFIC STYLES === */
+
+/* Page Title Hero (teachers.html এর জন্য) */
+.teachers-page-hero {
+    /* background-image: url('images/teachers-hero-bg.jpg'); */ /* HTML এ inline style দেওয়া হয়েছে */
+    background-color: var(--deep-blue); /* Fallback */
+    background-size: cover;
+    background-position: center 70%; /* ব্যাকগ্রাউন্ড ইমেজ পজিশন অ্যাডজাস্ট করুন */
+    padding: 60px 0;
+    text-align: center;
+    color: var(--soft-white);
+    position: relative;
+}
+.teachers-page-hero::before { /* Overlay */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 61, 98, 0.7); /* একটু বেশি স্বচ্ছ */
+}
+.teachers-page-hero .container {
+    position: relative; z-index: 2;
+}
+.teachers-page-hero .page-main-title {
+    font-size: 2.5rem; /* শিরোনাম সামান্য ছোট */
+    margin-bottom: 8px;
+}
+.teachers-page-hero .breadcrumb {
+    font-size: 0.9rem;
+}
+
+/* Teachers List Section */
+.teachers-list-section {
+    background-color: var(--soft-white); /* অথবা var(--light-gray) */
+}
+
+.section-intro-text { /* এই ক্লাসটি আগে তৈরি করা না থাকলে যোগ করুন */
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+.section-intro-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--medium-gray);
+}
+
+.teachers-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); /* responsive grid */
+    gap: 25px;
+}
+
+.teacher-profile-card {
+    background-color: #ffffff; /* কার্ডের ব্যাকগ্রাউন্ড */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* মোডাল খোলার ইঙ্গিত */
+    border: 1px solid #e0e0e0;
+}
+.teacher-profile-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.teacher-card-image-wrapper {
+    width: 100%;
+    height: 220px; /* ছবির উচ্চতা নির্দিষ্ট করা হলো */
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+.teacher-card-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center; /* ছবির উপরের অংশ দেখানোর চেষ্টা */
+    transition: transform 0.3s ease;
+}
+.teacher-profile-card:hover .teacher-card-photo {
+    transform: scale(1.08);
+}
+
+.teacher-card-info {
+    padding: 18px 20px 22px;
+}
+.teacher-card-name {
+    font-size: 1.3rem;
+    color: var(--deep-blue);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.teacher-card-designation {
+    font-size: 0.95rem;
+    color: var(--golden-yellow);
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+
+/* === TEACHER DETAIL MODAL STYLES === */
+
+.modal-teacher-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* গাঢ় স্বচ্ছ ব্যাকগ্রাউন্ড */
+    display: flex; /* <<-- display: none এর পরিবর্তে flex ব্যবহার করা হলো */
+    align-items: center;
+    justify-content: center;
+    z-index: 2000; /* অন্যান্য সবকিছুর উপরে */
+    
+    /* প্রাথমিকভাবে হিডেন এবং অ্যানিমেশনের জন্য প্রস্তুত */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* হিডেন থাকা অবস্থায় যেন ক্লিক না করা যায় */
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s; /* অপাসিটি এবং ভিজিবিলিটি ট্রানজিশন */
+}
+
+
+.modal-teacher-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; /* দেখানোর সময় ক্লিক করা যাবে */
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0s;
+}
+
+.modal-teacher-container {
+    background-color: var(--soft-white);
+    padding: 25px 30px; /* প্যাডিং সামান্য অ্যাডজাস্ট করা হলো */
+    border-radius: 10px; /* কোণা আরও গোলাকার */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); /* শ্যাডো আরও সুন্দর করা হলো */
+    width: 90%;
+    max-width: 680px; /* মোডালের সর্বোচ্চ প্রস্থ সামান্য বাড়ানো হলো */
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    
+    /* ওপেন এবং ক্লোজ অ্যানিমেশনের জন্য */
+    transform: translateY(20px) scale(0.95); /* প্রাথমিকভাবে সামান্য নিচে এবং ছোট থাকবে */
+    opacity: 0; /* প্রাথমিকভাবে স্বচ্ছ */
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.3s ease-in-out;
+    /* cubic-bezier একটি সুন্দর ইজিং ইফেক্ট দেবে */
+}
+
+
+.modal-teacher-overlay.active .modal-teacher-container {
+    transform: translateY(0) scale(1); /* স্বাভাবিক পজিশন এবং আকারে আসবে */
+    opacity: 1; /* সম্পূর্ণ দৃশ্যমান হবে */
+}
+
+.modal-teacher-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    z-index: 10; /* যেন কন্টেন্টের উপরে থাকে */
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    line-height: 1;
+}
+.modal-teacher-close-btn:hover {
+    color: var(--danger-red, #e74c3c);
+}
+
+.modal-profile-header {
+    display: flex;
+    align-items: flex-start; /* Align photo and text block to top */
+    gap: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.modal-profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--golden-yellow);
+    flex-shrink: 0;
+}
+.modal-profile-basic-info h2 { /* Name */
+    font-size: 1.7rem;
+    color: var(--deep-blue);
+    margin: 0 0 5px 0;
+}
+.modal-profile-basic-info p { /* Designation, Qualification */
+    font-size: 1rem;
+    color: var(--medium-gray);
+    margin: 0 0 3px 0;
+}
+.modal-profile-basic-info p:nth-of-type(1) { /* Designation */
+    font-weight: 500;
+    color: var(--golden-yellow);
+}
+
+.modal-profile-body .detail-block {
+    margin-bottom: 20px;
+}
+.modal-profile-body .detail-block h4 {
+    font-size: 1.2rem;
+    color: var(--deep-blue);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #ccc;
+}
+.modal-profile-body .detail-block h4 i.fas,
+.modal-profile-body .detail-block h4 i.fab {
+    margin-right: 8px;
+    color: var(--golden-yellow);
+    width: 20px; text-align: center;
+}
+.modal-profile-body .detail-block p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    margin-bottom: 8px;
+}
+.modal-profile-body .detail-block p strong {
+    color: var(--deep-blue);
+    min-width: 120px;
+    display: inline-block;
+}
+.modal-profile-contact p i.fas,
+.modal-profile-contact p i.fab {
+    color: var(--golden-yellow);
+    margin-right: 8px;
+    width: 18px; text-align: center;
+}
+.modal-profile-contact a {
+    color: var(--deep-blue); text-decoration: none;
+}
+.modal-profile-contact a:hover {
+    text-decoration: underline; color: var(--golden-yellow);
+}
+
+/* Responsive for Modal Teacher */
+@media (max-width: 600px) {
+    .modal-teacher-container { padding: 20px; }
+    .modal-profile-header { flex-direction: column; align-items: center; text-align: center; }
+    .modal-profile-photo { width: 90px; height: 90px; margin-bottom: 10px; }
+    .modal-profile-basic-info h2 { font-size: 1.5rem; }
+    .modal-profile-body .detail-block p strong { display: block; margin-bottom: 2px; }
+}
+
+
+/* === CLASSES.HTML PAGE SPECIFIC STYLES === */
+
+/* Page Title Hero (classes.html এর জন্য) */
+.classes-page-hero {
+    /* background-image: url('images/classes-hero-bg.jpg'); */ /* HTML এ inline style */
+    background-color: var(--deep-blue); /* Fallback */
+    background-size: cover;
+    background-position: center center;
+    padding: 60px 0;
+    text-align: center;
+    color: var(--soft-white);
+    position: relative;
+}
+.classes-page-hero::before { /* Overlay */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 61, 98, 0.7);
+}
+.classes-page-hero .container {
+    position: relative; z-index: 2;
+}
+.classes-page-hero .page-main-title {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+/* Detailed Classes Section */
+.detailed-classes-section {
+    background-color: var(--soft-white);
+}
+
+.class-details-container {
+    margin-top: 30px;
+}
+
+.class-detail-block {
+    background-color: #ffffff; /* প্রতিটি ব্লকের ব্যাকগ্রাউন্ড */
+    padding: 30px;
+    margin-bottom: 40px; /* প্রতিটি ব্লকের মধ্যে ফাঁকা জায়গা */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    border-left: 6px solid; /* বাম পাশে রঙিন বর্ডার (নিচে রঙ নির্দিষ্ট করা হবে) */
+    transition: box-shadow var(--transition-speed) ease;
+}
+.class-detail-block:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* প্রতিটি শ্রেণির ব্লকের জন্য আলাদা বাম বর্ডার কালার */
+.class-detail-block#class-6 { border-left-color: #3498db; } /* নীল */
+.class-detail-block#class-7 { border-left-color: #e74c3c; } /* লাল */
+.class-detail-block#class-8 { border-left-color: #2ecc71; } /* সবুজ */
+.class-detail-block#class-9 { border-left-color: #f39c12; } /* কমলা */
+.class-detail-block#class-10 { border-left-color: #9b59b6; } /* পার্পল */
+
+
+.class-detail-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.class-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--soft-white);
+    font-size: 1.8rem;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+/* আইকন র‍্যাপারের জন্য ভিন্ন রঙ */
+.class-icon-wrapper.class-color-1 { background-color: #3498db; }
+.class-icon-wrapper.class-color-2 { background-color: #e74c3c; }
+.class-icon-wrapper.class-color-3 { background-color: #2ecc71; }
+.class-icon-wrapper.class-color-4 { background-color: #f39c12; }
+.class-icon-wrapper.class-color-5 { background-color: #9b59b6; }
+
+
+.class-title {
+    font-size: 2rem;
+    color: var(--deep-blue);
+    margin: 0;
+}
+
+.class-detail-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.class-detail-content h4 {
+    font-size: 1.3rem;
+    color: var(--deep-blue);
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+ul.subject-list {
+    list-style: none;
+    padding-left: 0;
+    columns: 2; /* বিষয়গুলোকে দুই কলামে দেখানোর চেষ্টা (যদি পর্যাপ্ত জায়গা থাকে) */
+    column-gap: 20px;
+}
+ul.subject-list li {
+    font-size: 1rem;
+    color: var(--medium-gray);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+ul.subject-list li i.fas {
+    color: var(--golden-yellow);
+    margin-right: 10px;
+    width: 20px; /* আইকনের জায়গা */
+    text-align: center;
+}
+
+/* Responsive for Classes Page */
+@media (max-width: 768px) {
+    .class-title {
+        font-size: 1.8rem;
+    }
+    .class-icon-wrapper {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        margin-right: 15px;
+    }
+    ul.subject-list {
+        columns: 1; /* ছোট স্ক্রিনে এক কলাম */
+    }
+    .class-detail-block {
+        padding: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .page-title-hero .page-main-title { font-size: 2.1rem; }
+    .class-title { font-size: 1.6rem; }
+    .class-detail-content p { font-size: 1rem; }
+    .class-detail-content h4 { font-size: 1.15rem; }
+    ul.subject-list li { font-size: 0.95rem; }
+}
+
+
+/* === NOTICE.HTML PAGE SPECIFIC STYLES === */
+
+/* Page Title Hero (notice.html এর জন্য) */
+.notice-page-hero {
+    /* background-image: url('images/notice-hero-bg.jpg'); */ /* HTML এ inline style */
+    background-color: var(--deep-blue); /* Fallback */
+    background-size: cover;
+    background-position: center center;
+    padding: 60px 0;
+    text-align: center;
+    color: var(--soft-white);
+    position: relative;
+}
+.notice-page-hero::before { /* Overlay */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 61, 98, 0.7);
+}
+.notice-page-hero .container {
+    position: relative; z-index: 2;
+}
+.notice-page-hero .page-main-title {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+/* All Notices Section */
+.all-notices-section {
+    background-color: var(--light-gray);
+}
+
+/* Notice Filter Bar (যদি ব্যবহার করেন) */
+.notice-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--soft-white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-light);
+}
+.notice-search-input,
+.notice-category-select {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--body-font);
+    flex-grow: 1; /* যেন জায়গা নেয় */
+}
+.notice-search-input { min-width: 250px; }
+.notice-category-select { min-width: 200px; }
+.notice-filter-btn {
+    padding: 10px 25px; /* .btn ক্লাস থেকে আসবে, তবে অ্যাডজাস্ট করা যেতে পারে */
+}
+
+
+/* Notices List */
+.notices-list-container {
+    display: grid;
+    gap: 25px; /* নোটিশগুলোর মধ্যে ফাঁকা জায়গা */
+}
+
+.notice-list-item {
+    background-color: var(--soft-white);
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-light);
+    border-left: 5px solid; /* রঙ নিচে ক্যাটাগরি অনুযায়ী পরিবর্তন হবে */
+    transition: box-shadow var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+.notice-list-item:hover {
+    box-shadow: var(--box-shadow-medium);
+    transform: translateY(-3px);
+}
+
+/* ডিফল্ট বাম বর্ডার রঙ */
+.notice-list-item { border-left-color: var(--medium-gray); }
+
+/* ক্যাটাগরি অনুযায়ী বাম বর্ডার এবং ট্যাগ রঙ */
+.notice-item-category {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 12px; /* পিল শেপ */
+    color: var(--soft-white);
+    margin-left: 15px;
+}
+
+.notice-item-category.general-notice { background-color: var(--info-blue); }
+.notice-list-item:has(.general-notice) { border-left-color: var(--info-blue); }
+
+.notice-item-category.exam-notice { background-color: var(--danger-red); }
+.notice-list-item:has(.exam-notice) { border-left-color: var(--danger-red); }
+
+.notice-item-category.admission-notice { background-color: var(--success-green); }
+.notice-list-item:has(.admission-notice) { border-left-color: var(--success-green); }
+
+.notice-item-category.event-notice { background-color: var(--warning-orange); }
+.notice-list-item:has(.event-notice) { border-left-color: var(--warning-orange); }
+
+
+.notice-list-item-highlight { /* হাইলাইটেড নোটিশ */
+    background-color: #fffbeb; /* হালকা হলুদ */
+    border-left-color: var(--golden-yellow) !important; /* আগের বর্ডার ওভাররাইড */
+}
+.notice-list-item-highlight .notice-item-category {
+    background-color: var(--golden-yellow);
+    color: var(--deep-blue);
+}
+
+
+.notice-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+}
+.notice-item-date i.fas {
+    margin-right: 6px;
+    color: var(--golden-yellow);
+}
+
+.notice-item-title {
+    font-size: 1.35rem;
+    color: var(--deep-blue);
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+.notice-item-title:hover { /* ঐচ্ছিক: শিরোনামে হোভার ইফেক্ট */
+    color: var(--golden-yellow);
+}
+
+.notice-item-summary {
+    font-size: 1rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.notice-item-actions {
+    display: flex;
+    gap: 10px; /* বাটনগুলোর মধ্যে ফাঁকা জায়গা */
+    flex-wrap: wrap; /* ছোট স্ক্রিনে বাটন নিচে আসতে পারে */
+}
+.notice-item-actions .btn-sm { /* ছোট বাটন */
+    padding: 6px 12px;
+    font-size: 0.85rem;
+}
+.notice-item-actions .btn-sm i.fas {
+    margin-right: 5px;
+}
+.btn-outline-primary { /* .btn ক্লাসের উপর ভিত্তি করে */
+    border-color: var(--deep-blue);
+    color: var(--deep-blue);
+}
+.btn-outline-primary:hover {
+    background-color: var(--deep-blue);
+    color: var(--soft-white);
+}
+.btn-outline-secondary {
+    border-color: var(--medium-gray);
+    color: var(--medium-gray);
+}
+.btn-outline-secondary:hover {
+    background-color: var(--medium-gray);
+    color: var(--soft-white);
+}
+
+
+/* Pagination Styles (যদি ব্যবহার করেন) */
+.notice-pagination {
+    margin-top: 40px;
+}
+.pagination .page-item .page-link {
+    color: var(--deep-blue);
+    border-radius: 4px; /* Bootstrap এর ডিফল্ট গোলাকার কোণা */
+    margin: 0 3px;
+    border: 1px solid #dee2e6;
+}
+.pagination .page-item.active .page-link {
+    background-color: var(--deep-blue);
+    border-color: var(--deep-blue);
+    color: var(--soft-white);
+}
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+.pagination .page-link:hover {
+    background-color: var(--light-gray);
+}
+
+
+/* Responsive for Notice Page */
+@media (max-width: 768px) {
+    .notice-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .notice-item-category { margin-left: 0; }
+    .notice-item-title { font-size: 1.2rem; }
+    .notice-filter-bar { flex-direction: column; }
+}
+
+/* === ADMISSION.HTML PAGE SPECIFIC STYLES === */
+
+/* Page Title Hero (admission.html এর জন্য) */
+.admission-page-hero {
+    /* background-image: url('images/admission-hero-bg.jpg'); */ /* HTML এ inline style */
+    background-color: var(--deep-blue); /* Fallback */
+    background-size: cover;
+    background-position: center center;
+    padding: 60px 0;
+    text-align: center;
+    color: var(--soft-white);
+    position: relative;
+}
+.admission-page-hero::before { /* Overlay */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 61, 98, 0.7);
+}
+.admission-page-hero .container {
+    position: relative; z-index: 2;
+}
+.admission-page-hero .page-main-title {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+/* Detailed Admission Section */
+.detailed-admission-section {
+    background-color: var(--soft-white); /* অথবা var(--light-gray) */
+}
+
+.admission-info-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* বাম কলাম বড়, ডান কলাম (সাইডবার) ছোট */
+    gap: 40px; /* কলামগুলোর মধ্যে ফাঁকা জায়গা */
+    margin-top: 30px;
+}
+
+.admission-info-block {
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: #ffffff; /* সাদা ব্যাকগ্রাউন্ড প্রতিটি ব্লকের জন্য */
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-light);
+    border: 1px solid #e9ecef;
+}
+.admission-info-block:last-child {
+    margin-bottom: 0;
+}
+
+.admission-block-title {
+    font-size: 1.7rem;
+    color: var(--deep-blue);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--golden-yellow);
+    display: flex; /* আইকন ও টেক্সট অ্যালাইন করার জন্য */
+    align-items: center;
+}
+.admission-block-title i.fas {
+    margin-right: 12px;
+    color: var(--golden-yellow);
+    font-size: 1.1em; /* আইকন সামান্য বড় */
+}
+
+ul.custom-list-admission {
+    list-style: none;
+    padding-left: 0;
+}
+ul.custom-list-admission li {
+    font-size: 1.05rem;
+    color: var(--dark-gray);
+    line-height: 1.7;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+}
+ul.custom-list-admission li::before {
+    content: '\f058'; /* Font Awesome check-circle icon */
+    font-family: 'Font Awesome 5 Free'; /* অথবা আপনার Font Awesome ভার্সন */
+    font-weight: 900; /* Solid icon */
+    color: var(--success-green, #2ecc71); /* সবুজ টিক চিহ্ন */
+    position: absolute;
+    left: 0;
+    top: 3px;
+    font-size: 1.1em;
+}
+ul.custom-list-admission.documents-list li::before { /* কাগজপত্রের তালিকার জন্য ভিন্ন আইকন */
+    content: '\f15c'; /* fa-file-alt */
+    color: var(--info-blue, #3498db);
+}
+ul.custom-list-admission li strong {
+    color: var(--deep-blue);
+    font-weight: 500;
+}
+
+p.note {
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+    margin-top: 15px;
+    font-style: italic;
+}
+
+ol.admission-process-list {
+    list-style: none;
+    counter-reset: process-counter; /* ক্রমিক নম্বরের জন্য কাউন্টার */
+    padding-left: 0;
+}
+ol.admission-process-list li {
+    font-size: 1.05rem;
+    color: var(--dark-gray);
+    line-height: 1.7;
+    margin-bottom: 15px;
+    padding-left: 45px; /* নম্বরের জন্য জায়গা */
+    position: relative;
+}
+ol.admission-process-list li span { /* ক্রমিক নম্বর স্টাইল করার জন্য */
+    counter-increment: process-counter;
+    content: counter(process-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: var(--golden-yellow);
+    color: var(--deep-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+
+/* Admission Sidebar */
+.admission-sidebar .sidebar-widget {
+    background-color: var(--light-gray); /* সাইডবার উইজেটের ব্যাকগ্রাউন্ড */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: var(--box-shadow-light);
+}
+.admission-sidebar .sidebar-widget:last-child {
+    margin-bottom: 0;
+}
+.sidebar-widget-title {
+    font-size: 1.4rem;
+    color: var(--deep-blue);
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.fees-table-sidebar { /* সাইডবারের ফি টেবিল */
+    width: 100%;
+    font-size: 0.95rem;
+    border-collapse: collapse;
+}
+.fees-table-sidebar th,
+.fees-table-sidebar td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-family:  var(--body-font);
+}
+.fees-table-sidebar thead th {
+    background-color: #e0e0e0; /* হালকা হেডার */
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+.fees-table-sidebar td:last-child {
+    text-align: right;
+    font-weight: 500;
+}
+
+ul.important-dates-list {
+    list-style: none;
+    padding-left: 0;
+}
+ul.important-dates-list li {
+    font-size: 0.95rem;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+ul.important-dates-list li i.fas {
+    color: var(--golden-yellow);
+    margin-right: 10px;
+    width: 18px;
+    text-align: center;
+}
+
+.admission-sidebar .sidebar-widget p {
+    font-size: 0.95rem;
+    color: var(--dark-gray);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+.admission-sidebar .sidebar-widget p i.fas {
+    margin-right: 10px;
+    color: var(--golden-yellow);
+    width: 18px; text-align: center;
+}
+.btn-block { display: block; width: 100%; text-align: center; }
+.mt-3 { margin-top: 1rem !important; } /* ইউটিলিটি ক্লাস */
+.mt-2 { margin-top: 0.5rem !important; }
+
+
+/* Responsive for Admission Page */
+@media (max-width: 992px) {
+    .admission-info-layout {
+        grid-template-columns: 1fr; /* ট্যাবলেট ও মোবাইলে এক কলাম */
+    }
+    .admission-sidebar {
+        margin-top: 30px; /* প্রধান কন্টেন্টের নিচে সাইডবার আসবে */
+    }
+}
+@media (max-width: 576px) {
+    .page-title-hero .page-main-title { font-size: 2.1rem; }
+    .admission-block-title { font-size: 1.5rem; }
+    ul.custom-list-admission li,
+    ol.admission-process-list li { font-size: 1rem; }
+    .admission-info-block { padding: 20px; }
+    .sidebar-widget-title { font-size: 1.3rem; }
+    .fees-table-sidebar, ul.important-dates-list li, .admission-sidebar .sidebar-widget p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+/* === CONTACT.HTML PAGE SPECIFIC STYLES === */
+
+/* Page Title Hero (contact.html এর জন্য) */
+.contact-page-hero {
+    /* background-image: url('images/contact-hero-bg.jpg'); */ /* HTML এ inline style */
+    background-color: var(--deep-blue); /* Fallback */
+    background-size: cover;
+    background-position: center center;
+    padding: 60px 0;
+    text-align: center;
+    color: var(--soft-white);
+    position: relative;
+}
+.contact-page-hero::before { /* Overlay */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 61, 98, 0.7);
+}
+.contact-page-hero .container {
+    position: relative; z-index: 2;
+}
+.contact-page-hero .page-main-title {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+/* Contact Details Section */
+.contact-details-section {
+    background-color: var(--soft-white);
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* তথ্যের ব্লকগুলোর মধ্যে ফাঁকা জায়গা */
+    margin-top: 30px;
+}
+
+.contact-info-item {
+    background-color: var(--light-gray); /* প্রতিটি আইটেমের ব্যাকগ্রাউন্ড */
+    padding: 30px 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--box-shadow-light);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    border-top: 4px solid var(--golden-yellow); /* উপরে সোনালী বর্ডার */
+}
+.contact-info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-medium);
+}
+
+.contact-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--golden-yellow);
+    color: var(--deep-blue); /* আইকনের রঙ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem; /* আইকনের সাইজ */
+    margin: 0 auto 20px auto; /* মাঝখানে এবং নিচে মার্জিন */
+    transition: transform 0.3s ease;
+}
+.contact-info-item:hover .contact-icon-wrapper {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.contact-item-title {
+    font-size: 1.4rem;
+    color: var(--deep-blue);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.contact-info-item p {
+    font-size: 1rem;
+    color: var(--medium-gray);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+.contact-info-item p:last-of-type {
+    margin-bottom: 0;
+}
+.contact-info-item .map-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--golden-yellow);
+    font-weight: 500;
+    text-decoration: none;
+}
+.contact-info-item .map-link:hover {
+    text-decoration: underline;
+    color: var(--deep-blue);
+}
+.contact-info-item .map-link i.fas {
+    margin-left: 5px;
+    font-size: 0.85em;
+}
+
+
+/* Google Map Section */
+.google-map-section {
+    /* এই সেকশনের কোনো অতিরিক্ত প্যাডিং বা মার্জিন দরকার নেই, iframe পুরোটা জুড়ে থাকবে */
+    line-height: 0; /* iframe এর নিচে অবাঞ্ছিত ফাঁকা জায়গা দূর করার জন্য */
+}
+.google-map-section iframe {
+    border: none; /* iframe এর ডিফল্ট বর্ডার বাদ দেওয়া */
+    display: block; /* inline এলিমেন্টের মতো যেন আচরণ না করে */
+}
+
+
+/* Optional Contact Form on Contact Page (যদি যোগ করেন) */
+#contact-form-on-contact-page { /* স্বতন্ত্র আইডি */
+    background-color: var(--light-gray); /* হোমপেজের ফর্মের সেকশনের মতো */
+}
+/* হোমপেজের .contact-form-wrapper এবং এর ভেতরের স্টাইলগুলো এখানেও প্রযোজ্য হবে,
+   যদি একই ক্লাস নাম ব্যবহার করেন। */
+
+
+/* Responsive for Contact Page */
+@media (max-width: 768px) {
+    .contact-info-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    .contact-info-item { padding: 25px 20px; }
+    .contact-item-title { font-size: 1.3rem; }
+    .contact-icon-wrapper {
+        width: 60px; height: 60px; font-size: 1.8rem;
+    }
+}

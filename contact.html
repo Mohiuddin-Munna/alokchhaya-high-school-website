@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আলোকছায়া হাই স্কুল</title> <!-- পেজের টাইটেল পরিবর্তন হতে পারে -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"> <!-- আপনার মূল CSS ফাইল -->
+</head>
+<body>
+
+    <!-- ============================================= -->
+    <!-- Navbar Section -->
+    <!-- ============================================= -->
+    <header class="header fixed-navbar"> <!-- নতুন ক্লাস fixed-navbar যোগ করা হলো -->
+        <nav class="navbar container">
+            <div class="nav-branding">
+                <!-- অপশন ১: শুধুমাত্র স্কুলের নাম -->
+                <a href="/" class="nav-logo-text">আলোকছায়া হাই স্কুল</a>
+
+                <!-- অপশন ২: স্কুলের লোগো এবং নাম (লোগো থাকলে এটি ব্যবহার করুন) -->
+                <!--
+                <a href="/" class="nav-logo-link">
+                    <img src="images/school-logo.png" alt="আলোকছায়া হাই স্কুল লোগো" class="school-logo-img">
+                    <span class="nav-logo-text-with-image">আলোকছায়া হাই স্কুল</span>
+                </a>
+                -->
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">হোম</a> <!-- index.html এর জন্য active -->
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">আমাদের সম্পর্কে</a>
+                </li>
+                <li class="nav-item">
+                    <a href="classes.html" class="nav-link">শ্রেণিসমূহ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="notice.html" class="nav-link">নোটিশ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="admission.html" class="nav-link">ভর্তি</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">যোগাযোগ</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+<main class="main-content"> <!-- Navbar এর নিচে main কন্টেন্ট শুরু -->
+    <!-- ============================================= -->
+    <!-- Contact Page Hero/Title Section -->
+    <!-- ============================================= -->
+    <section class="page-title-hero contact-page-hero" style="background-image: url('images/contact-hero-bg.jpg');">
+        <div class="container">
+            <h1 class="page-main-title">যোগাযোগ করুন</h1>
+            <div class="breadcrumb">
+                <a href="index.html">হোম</a> <i class="fas fa-angle-right"></i> <span>যোগাযোগ</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- Contact Details & Map Section -->
+    <!-- ============================================= -->
+    <section class="contact-details-section section-padding">
+        <div class="container">
+            <div class="section-intro-text text-center">
+                <p>আলোকছায়া হাই স্কুলের সাথে যোগাযোগ করার জন্য আপনাকে ধন্যবাদ। আপনার যেকোনো প্রশ্ন, মতামত বা পরামর্শ থাকলে নিচের তথ্য অনুযায়ী আমাদের সাথে যোগাযোগ করতে পারেন। আমরা যত দ্রুত সম্ভব আপনার সাথে যোগাযোগের চেষ্টা করব।</p>
+            </div>
+
+            <div class="contact-info-grid">
+                <!-- Address Block -->
+                <div class="contact-info-item">
+                    <div class="contact-icon-wrapper">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="contact-item-title">স্কুলের ঠিকানা</h3>
+                    <p>আলোকছায়া হাই স্কুল রোড, সেক্টর-৭, উত্তরা (বা আপনার স্কুলের সঠিক ঠিকানা)</p>
+                    <p>ঢাকা - ১২৩০, বাংলাদেশ</p>
+                    <a href="https://maps.google.com/?q=Alokchhaya+High+School+Dhaka" target="_blank" class="map-link">গুগল ম্যাপে দেখুন <i class="fas fa-external-link-alt"></i></a>
+                </div>
+
+                <!-- Phone Block -->
+                <div class="contact-info-item">
+                    <div class="contact-icon-wrapper">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <h3 class="contact-item-title">ফোন নম্বর</h3>
+                    <p>অফিস: +৮৮ ০২ xxxxxxxx</p>
+                    <p>প্রধান শিক্ষক: +৮৮ ০১৭xx xxxxxx</p>
+                    <p>ভর্তি শাখা: +৮৮ ০১৮xx xxxxxx</p>
+                </div>
+
+                <!-- Email Block -->
+                <div class="contact-info-item">
+                    <div class="contact-icon-wrapper">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <h3 class="contact-item-title">ইমেইল ঠিকানা</h3>
+                    <p>সাধারণ তথ্যের জন্য: info@alokchhayaschool.edu.bd</p>
+                    <p>ভর্তি সংক্রান্ত: admission@alokchhayaschool.edu.bd</p>
+                    <p>অভিযোগ/পরামর্শ: feedback@alokchhayaschool.edu.bd</p>
+                </div>
+
+                <!-- Office Hours Block -->
+                <div class="contact-info-item">
+                    <div class="contact-icon-wrapper">
+                        <i class="fas fa-business-time"></i>
+                    </div>
+                    <h3 class="contact-item-title">অফিস সময়</h3>
+                    <p>শনিবার - বৃহস্পতিবার: সকাল ৯:০০ ঘটিকা - বিকাল ৪:০০ ঘটিকা</p>
+                    <p>শুক্রবার ও সরকারি ছুটির দিন বন্ধ।</p>
+                </div>
+            </div> <!-- .contact-info-grid শেষ -->
+        </div> <!-- .container শেষ -->
+    </section>
+
+
+
+ 
+        <!-- ============================================= -->
+        <!-- Contact Form Section (যোগাযোগ) -->
+        <!-- ============================================= -->
+        <section id="contact-form-section" class="contact-form-section section-padding">
+            <div class="container">
+                <h2 class="section-title">যোগাযোগ করুন</h2>
+                <div class="contact-form-wrapper">
+                    <form action="#" method="POST" class="contact-form" id="mainContactForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="contactName" class="form-label">আপনার নাম</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="contactName" name="name" class="form-control" placeholder="সম্পূর্ণ নাম লিখুন" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail" class="form-label">আপনার ইমেইল</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="contactEmail" name="email" class="form-control" placeholder="ইমেইল ঠিকানা লিখুন" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone" class="form-label">ফোন নম্বর (ঐচ্ছিক)</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="ফোন নম্বর লিখুন">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject" class="form-label">বিষয়</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-tag"></i>
+                                    <input type="text" id="contactSubject" name="subject" class="form-control" placeholder="বার্তার বিষয় লিখুন" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-fullwidth">
+                            <label for="contactMessage" class="form-label">আপনার বার্তা</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-comment-dots"></i>
+                                <textarea id="contactMessage" name="message" class="form-control" rows="6" placeholder="আপনার বিস্তারিত বার্তা লিখুন" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-fullwidth text-center">
+                            <button type="submit" class="btn btn-primary btn-submit-contact">বার্তা পাঠান</button>
+                        </div>
+                    </form>
+                    <div id="form-status-message" class="form-status"></div> <!-- Form submission status message -->
+                </div>
+            </div>
+        </section>
+   
+
+
+
+    <!-- ============================================= -->
+    <!-- Google Map Section -->
+    <!-- ============================================= -->
+    <section class="google-map-section">
+        <!-- এখানে গুগল ম্যাপ এম্বেড কোড বসাতে হবে -->
+        <!-- উদাহরণ: -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.501878367506!2d90.39096081540708!3d23.87180148452977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5d05e0d7c9b%3A0x3dc9e9ab3e9ad1a9!2sUttara%20High%20School%20and%20College!5e0!3m2!1sen!2sbd!4v1678888888888!5m2!1sen!2sbd" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="আলোকছায়া হাই স্কুল গুগল ম্যাপে">
+        </iframe>
+    </section>
+    <!-- ============================================= -->
+</main>
+
+
+
+    <!-- ============================================= -->
+    <!-- Footer Section -->
+    <!-- ============================================= -->
+    <footer class="footer">
+        <div class="container footer-main-content">
+            <div class="footer-column footer-about">
+                <h3 class="footer-school-name">আলোকছায়া হাই স্কুল</h3>
+                <p class="footer-tagline">আলোকের পথে এগিয়ে চলি</p>
+                <div class="footer-social-icons">
+                    <a href="https://facebook.com/your-school-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com/your-school-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="mailto:info@alokchhayaschool.edu.bd" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <!-- আপনি চাইলে আরও সোশ্যাল আইকন যোগ করতে পারেন -->
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
+                </div>
+            </div>
+
+            <div class="footer-column footer-quick-links">
+                <h4 class="footer-col-title">দ্রুত লিঙ্ক</h4>
+                <ul>
+                    <li><a href="/">হোম</a></li>
+                    <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                    <li><a href="classes.html">শ্রেণিসমূহ</a></li>
+                    <li><a href="notice.html">নোটিশ বোর্ড</a></li>
+                    <li><a href="admission.html">ভর্তি</a></li>
+                    <li><a href="contact.html">যোগাযোগ</a></li> <!-- contact.html পেজের লিঙ্ক -->
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact-info">
+                <h4 class="footer-col-title">যোগাযোগের তথ্য</h4>
+                <p><i class="fas fa-map-marker-alt"></i> ঠিকানা: আলোকছায়া হাই স্কুল রোড,<br>ঢাকা, বাংলাদেশ</p>
+                <p><i class="fas fa-phone-alt"></i> ফোন: ০২-xxxxxxxxx</p>
+                <p><i class="fas fa-envelope"></i> ইমেইল: info@alokchhayaschool.edu.bd</p>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="container footer-bottom-content"> <!-- নতুন ক্লাস যোগ করা হলো -->
+                <p class="copyright-text">&copy; <span id="current-year"></span> আলোকছায়া হাই স্কুল। সকল অধিকার সংরক্ষিত।</p>
+                <p class="designer-credit">ডিজাইন করেছেন: <a href="https://mohiuddinmunna.netlify.app" target="_blank" rel="noopener noreferrer">মহিউদ্দিন মুন্না</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script> <!-- আপনার মূল JavaScript ফাইল -->
+</body>
+</html>
